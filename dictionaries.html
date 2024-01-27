@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Словари</title>
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словари</title>
 </head>
 <style>
     @media (hover: hover) {
@@ -109,16 +111,16 @@
     </h1>
     <div class="c">
         <p>
-            Словарь <code><span class="pink-marked">dict</span></code> – коллекция произвольных объектов с доступом по ключу
+            Словарь <code><span lang="en" class="pink-marked">dict</span></code> – коллекция произвольных объектов с доступом по ключу
         </p>
         <p>
-            Ключ <code><span class="pink-marked">key</span></code> – строка, число или кортеж
+            Ключ <code><span lang="en" class="pink-marked">key</span></code> – строка, число или кортеж
         </p>
         <p>
-            Значение <code><span class="pink-marked">value</span></code> – любой тип данных
+            Значение <code><span lang="en" class="pink-marked">value</span></code> – любой тип данных
         </p>
         <p>
-            Элемент <code><span class="pink-marked">item</span></code> – кортеж вида <code>(key, value)</code>
+            Элемент <code><span lang="en" class="pink-marked">item</span></code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
         <h1>
             Содержание
@@ -127,7 +129,7 @@
         <a href="#block1" class="a1">Создание словаря</a>
         <a href="#block1.1" class="a2">Классический способ</a>
         <a href="#block1.2" class="a2">Генератор</a>
-        <a href="#block1.3" class="a2">Функция <code style="font-size: 3ex">dict()</code></a>
+        <a href="#block1.3" class="a2">Функция <code lang="en">dict()</code></a>
         <br>
         <a href="#block2" class="a1">Методы словарей</a>
         <div id="block1" class="block">
@@ -142,8 +144,8 @@
                 Короткий и многообразный словарь можно создать, поместив необходимые элементы в фигурные скобки. Этот способ силён, если необходимо быстро вручную записать несколько элементов. Особенно эффективен, если элементы состоят из разных типов данных. Приведём пример простого словаря, хранящего имена работников в разных офисах компании
             </p>
             <div class="co">
-            <code>
-                offices = {'офис 1': ['Игорь', 'Наталья'], 'офис 2': ['Анна', 'Кирилл']}<br>
+            <code lang="en">
+                offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}<br>
             </code>
             </div>
             <p>
@@ -155,10 +157,10 @@
                 2. Генератор словарей
             </h2>
             <p>
-                Предположим, нам надо описать функцию <code><span class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code>x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать следующим образом:
+                Предположим, нам надо описать функцию <code><span lang="en" class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code lang="en">x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать следующим образом:
             </p>
             <div class="co">
-            <code>
+            <code lang="en">
                 dots = {x: x ** 2 - 1 for x in range(1, 6)}<br>
                 <br>
                 <span class="grey">#{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</span>
@@ -167,17 +169,17 @@
             </div>
             <div id="block1.3" class="block">
                 <h2>
-                    3. Функция dict()
+                    3. Функция <code lang="en">dict()</code>
                 </h2>
                 <p>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Если функция принимает на вход словарь, результатом будет тот же словарь, отсортированный по ключам. Приведём пример присвоения идентификационных номеров работникам из разных офисов
                 </p>
                 <div class="co">
-                <code>
-                    workers = dict([("Анна", 1), ("Игорь", 2), ("Кирилл", 3), ("Наталья", 4)])<br>
-                    workers = dict(Анна=1, Игорь=2, Кирилл=3, Наталья=4)<br>
+                <code lang="en">
+                    workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])<br>
+                    workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)<br>
                     <br>
-                    <span style="color: red;">#{"Анна": 1, "Игорь": 2, "Кирилл": 3, "Наталья": 4}</span>
+                    <span style="color: red;">#{"Ann": 1, "Igor": 2, "Kirill": 3, "Nataly": 4}</span>
                 </code>
                 </div>
                 <p>
