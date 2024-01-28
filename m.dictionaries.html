@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Короткий и многообразный словарь можно создать при помощи функции...">
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     <meta http-equiv="content-language" content="ru">
-    <link rel="canonical" href="https://fbdayy.ru/m.dictionaries">
     <title>Самый подробный гайд по словарям на питоне</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 </head>
 <style>
     @media (orientation: portrait) {
@@ -25,21 +26,16 @@
             padding: 1px 8px 1px 8px;
             border-radius: 30px;
         }
-    
+        
         .red{
-            color: red;
+            color: #BFBCB8;
         }
         
         p{
             margin: 0, 0, 15px, 0;
             text-align: left;
             font-size: 2ex;
-            font-family: "Lucida Console", "Courier New", monospace;
-        }
-        
-        .c{
-            margin: 0, 0, 0, 0;
-            width: 100%;
+            font-family: 'Roboto', sans-serif;
         }
         
         .co{
@@ -48,8 +44,8 @@
             overflow-y: scroll;
             text-align: left;
             border-radius: 30px;
-            font-size: 1.5ex;
             padding: 15px 20px 15px 20px;
+            background-color: #f3fdff;
         }
         
         .block{
@@ -57,18 +53,18 @@
         }
         
         .block:target {
-            animation: anim 2s;
+            animation: anim .5s;
         }
         
         @keyframes anim { 
             0%, 100% {background: rgba(0,0,0,0);}
-            50% {background: #fce8ec;}
+            50% {background: #bbf2ff;}
         }
         
         .a1{
             text-align: center;
             font-size: 3ex;
-            font-family: "Lucida Console", "Courier New", monospace;
+            font-family: 'Roboto', sans-serif;
             text-decoration: none;
             color: #020250;
             display: block;
@@ -78,7 +74,7 @@
         .a2{
             text-align: center;
             font-size: 2ex;
-            font-family: "Lucida Console", "Courier New", monospace;
+            font-family: 'Roboto', sans-serif;
             text-decoration: none;
             color: #020250;
             display: block;
@@ -90,6 +86,7 @@
             vertical-align: top;
             font-size: 4ex;
             margin-block-end: 40px;
+            font-family: 'Roboto', sans-serif;
         }
         
         h2{
@@ -100,12 +97,29 @@
         }
         
         code{
-            font-size: 3ex;
+            font-size: 2ex;
             white-space: nowrap;
         }
         
         .inner-cont{
             padding: 5px 20px 5px 20px;
+        }
+        
+        .sticker{
+            background-color: #F5FCF1;
+            padding: 30px;
+            border-radius: 30px;
+        }
+        
+        .pink-sticker{
+            background-color: #fce8ec;
+            padding: 30px;
+            border-radius: 30px;
+        }
+        .blue-sticker{
+            background-color: #bbf2ff;
+            padding: 30px;
+            border-radius: 30px;
         }
     }
     
@@ -134,12 +148,10 @@
         <div class="inner-cont">
         <br>
         <a href="#block1" class="a1">Создание словаря</a>
-        <a href="#block1.1" class="a2">Классический способ</a>
-        <a href="#block1.2" class="a2">Генератор</a>
-        <a href="#block1.3" class="a2">Функция <code lang="en">dict()</code></a>
-        <br>
+        <a href="#block1.1" class="a2"> Классический способ</a>
+        <a href="#block1.2" class="a2"> Генератор</a>
+        <a href="#block1.3" class="a2"> Функция <code lang="en">dict()</code></a>
         <a href="#block2" class="a1">Методы словарей</a>
-        </div>
         <div id="block1" class="block">
             <h1>
                 Создание словаря
@@ -149,7 +161,7 @@
             <h2>
                 1. Классика
             </h2>
-            <p>
+            <p class="sticker">
                 Короткий и многообразный словарь можно создать, поместив необходимые элементы в фигурные скобки. Этот способ силён, если необходимо быстро вручную записать несколько элементов. Особенно эффективен, если элементы состоят из разных типов данных. Приведём пример простого словаря, хранящего имена работников в разных офисах компании
             </p>
             <div class="co">
@@ -158,7 +170,10 @@
             </code>
             </div>
             <p>
-                Очевидный минус этого способа: им невозможно заполнить огромное количество данных
+                Сразу заметен огромный минус этого способа: им невозможно заполнить большое количество данных. В связи с этим, можно считать, что способ рационально использовать только для создания словаря длиной не более пары десятков элементов
+            </p>
+            <p>
+                Что делать с большим количеством данных мы узнаем в следующих блоках
             </p>
             </div>
             </div>
@@ -168,7 +183,10 @@
                 2. Генератор словарей
             </h2>
             <p>
-                Предположим, нам надо описать функцию <code><span lang="en" class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code lang="en">x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать следующим образом:
+                Предположим, нам надо описать функцию <code><span lang="en" class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code lang="en">x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно будет крайне монотонен и скучен. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
+            </p>
+            <p class="sticker">
+                По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
             </p>
             <div class="co">
             <code lang="en">
@@ -178,14 +196,20 @@
             </code>
             </div>
             <p>
-                Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к значению словаря
+                Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к значению словаря. Достаточно увеличить диапазон генерации и тут же ваш словарь станет в несколько раз содержательнее
+            </p>
+            <p>
+                Плюс этого способа заключается в том, что для любой зависимости, поддающейся функциональному описанию, можно сгенерировать элемент при помощи компьютерных вычислений. Таким образом мы способны обрабатывать большое количество информации за короткий срок
+            </p>
+            <p class=pink-sticker>
+                Отлично, мы разобрались с тем, как быстро создать осмысленный словарь при помощи только что написанной функии. Но что делать, если элементы у нас уже есть, но они записаны в другом типе данных? Неужели придётся использовать циклы? Не придётся, ведь именно для таких случаев и припасена ещё одна коварная функция...
             </p>
             </div>
             </div>
             <div id="block1.3" class="block">
             <div class="inner-cont">
                 <h2>
-                    3. Функция <span lang="en">dict([other])</span>
+                    3. Функция <span lang="en">dict()</span>
                 </h2>
                 <p>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Если функция принимает на вход словарь, результатом будет тот же словарь, отсортированный по ключам. Приведём пример присвоения идентификационных номеров работникам из разных офисов
