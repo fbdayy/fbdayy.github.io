@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 </head>
 <style>
+    :root {
+        --mygreen: #f5fcf1;
+        --mypink: #f4dde6;
+        --myblue: #daeef9;
+        --mygrey: #bfbcb8;
+    }
+
     @media (orientation: portrait) {
         .c{
             display: flex;
@@ -21,14 +28,9 @@
             align-content: center;
         }
         
-        .pink-marked{
-            background-color: #fce8ec;
+        .marked{
             padding: 1px 8px 1px 8px;
             border-radius: 30px;
-        }
-        
-        .red{
-            color: #BFBCB8;
         }
         
         p{
@@ -45,7 +47,6 @@
             text-align: left;
             border-radius: 30px;
             padding: 15px 20px 15px 20px;
-            background-color: #f3fdff;
         }
         
         .block{
@@ -62,22 +63,12 @@
         }
         
         .a1{
-            text-align: center;
             font-size: 3ex;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: #020250;
-            display: block;
             margin-bottom: 20px;
         }
         
         .a2{
-            text-align: center;
             font-size: 2ex;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: #020250;
-            display: block;
             margin-bottom: 10px;
         }
         
@@ -106,20 +97,55 @@
         }
         
         .sticker{
-            background-color: #F5FCF1;
             padding: 30px;
+            margin-top: 70px;
+            margin-bottom: 70px;
             border-radius: 30px;
+            -webkit-box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
+            -moz-box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
+            box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
         }
         
-        .pink-sticker{
-            background-color: #fce8ec;
-            padding: 30px;
-            border-radius: 30px;
+        :nth-child(-n + 1 of p.sticker){
+            background-color: var(--mygreen);
         }
-        .blue-sticker{
-            background-color: #bbf2ff;
-            padding: 30px;
-            border-radius: 30px;
+        
+        :nth-child(2 of p.sticker){
+            background-color: var(--myblue);
+        }
+        
+        code.marked:nth-child(n){
+            background-color: var(--mypink);
+        }
+        
+        a{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: #020250;
+            display: block;
+            position: relative;
+            max-width: max-content;
+        }
+        
+        a:hover {
+            color: #020250;
+        }
+        
+        a::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #020250;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        a:hover::before {
+            transform: scaleX(1);
         }
     }
     
@@ -133,16 +159,16 @@
     <div class="c">
         <div class="inner-cont">
         <p>
-            Словарь <code><span lang="en" class="pink-marked">dict</span></code> – коллекция произвольных объектов с доступом по ключу
+            Словарь <code class="marked" lang="en">dict</code> – коллекция произвольных объектов с доступом по ключу
         </p>
         <p>
-            Ключ <code><span lang="en" class="pink-marked">key</span></code> – строка, число или кортеж
+            Ключ <code class="marked" lang="en">key</code> – строка, число или кортеж
         </p>
         <p>
-            Значение <code><span lang="en" class="pink-marked">value</span></code> – любой тип данных
+            Значение <code lang="en" class="marked">value</code> – любой тип данных
         </p>
         <p>
-            Элемент <code><span lang="en" class="pink-marked">item</span></code> – кортеж вида <code lang="en">(key, value)</code>
+            Элемент <code lang="en" class="marked">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
         </div>
         <div class="inner-cont">
@@ -151,6 +177,7 @@
         <a href="#block1.1" class="a2"> Классический способ</a>
         <a href="#block1.2" class="a2"> Генератор</a>
         <a href="#block1.3" class="a2"> Функция <code lang="en">dict()</code></a>
+        <br>
         <a href="#block2" class="a1">Методы словарей</a>
         <div id="block1" class="block">
             <h1>
@@ -162,7 +189,10 @@
                 1. Классика
             </h2>
             <p class="sticker">
-                Короткий и многообразный словарь можно создать, поместив необходимые элементы в фигурные скобки. Этот способ силён, если необходимо быстро вручную записать несколько элементов. Особенно эффективен, если элементы состоят из разных типов данных. Приведём пример простого словаря, хранящего имена работников в разных офисах компании
+                Словарь можно создать, поместив необходимые элементы в фигурные скобки. Это сильнейший способ для создания короткого словаря, но наиболее бесполезный для словарей большего размера
+            </p>
+            <p>
+                Создадим словарь, содержащий информацию об именах работников компании из разных офисов
             </p>
             <div class="co">
             <code lang="en">
@@ -183,7 +213,7 @@
                 2. Генератор словарей
             </h2>
             <p>
-                Предположим, нам надо описать функцию <code><span lang="en" class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code lang="en">x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно будет крайне монотонен и скучен. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
+                Предположим, нам надо описать функцию <code lang="en" class="marked">y = x² - 1</code> для всех целочисленных <code lang="en">x</code> на отрезке <code class="marked">[1, 5]</code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно будет крайне монотонен и скучен. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
             </p>
             <p class="sticker">
                 По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
@@ -201,8 +231,8 @@
             <p>
                 Плюс этого способа заключается в том, что для любой зависимости, поддающейся функциональному описанию, можно сгенерировать элемент при помощи компьютерных вычислений. Таким образом мы способны обрабатывать большое количество информации за короткий срок
             </p>
-            <p class=pink-sticker>
-                Отлично, мы разобрались с тем, как быстро создать осмысленный словарь при помощи только что написанной функии. Но что делать, если элементы у нас уже есть, но они записаны в другом типе данных? Неужели придётся использовать циклы? Не придётся, ведь именно для таких случаев и припасена ещё одна коварная функция...
+            <p class=sticker>
+                Отлично, мы разобрались с тем, как быстро создать осмысленный словарь при помощи только что написанной функии. Но что делать, если элементы у нас уже есть, только записаны они в другом типе данных? Неужели придётся использовать циклы? Не придётся, ведь именно для таких случаев и припасена ещё одна коварная функция...
             </p>
             </div>
             </div>
