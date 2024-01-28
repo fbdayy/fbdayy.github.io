@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Короткий и многообразный словарь можно создать при помощи функции...">
+    <meta name="author" content="fbdayy">
+    <meta name="reply-to" content="fbdayy@gmail.com">
+    <meta http-equiv="content-language" content="ru">
+    <link rel="canonical" href="https://fbdayy.ru/dictionaries/mobile">
+    <title>Самый подробный гайд по словарям на питоне</title>
+</head>
+<style>
+    @media (orientation: portrait) {
+        .c{
+            display: flex;
+            flex-direction: column;
+            align-items: top;
+            justify-content: center;
+            align-content: center;
+        }
+        
+        .pink-marked{
+            background-color: #fce8ec;
+            padding: 1px 8px 1px 8px;
+            border-radius: 30px;
+        }
+    
+        .red{
+            color: red;
+        }
+        
+        p{
+            margin: 0, 0, 15px, 0;
+            text-align: left;
+            font-size: 2ex;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        .c{
+            margin: 0, 0, 0, 0;
+            width: 100%;
+        }
+        
+        .co{
+            border: 2px solid;
+            overflow-x: scroll;
+            overflow-y: scroll;
+            text-align: left;
+            border-radius: 30px;
+            font-size: 1.5ex;
+            padding: 15px 20px 15px 20px;
+        }
+        
+        .block{
+            border-radius: 30px;
+        }
+        
+        .block:target {
+            animation: anim 2s;
+        }
+        
+        @keyframes anim { 
+            0%, 100% {background: rgba(0,0,0,0);}
+            50% {background: #fce8ec;}
+        }
+        
+        .a1{
+            text-align: center;
+            font-size: 3ex;
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-decoration: none;
+            color: #020250;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .a2{
+            text-align: center;
+            font-size: 2ex;
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-decoration: none;
+            color: #020250;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        h1{
+            text-align: center;
+            vertical-align: top;
+            font-size: 4ex;
+            margin-block-end: 40px;
+        }
+        
+        h2{
+            text-align: center;
+            vertical-align: top;
+            font-size: 3ex;
+            margin-block-end: 40px;
+        }
+        
+        code{
+            font-size: 3ex;
+            white-space: nowrap;
+        }
+        
+        .inner-cont{
+            padding: 5px 20px 5px 20px;
+        }
+    }
+    
+    @media (orientation: landscape) {
+    }
+</style>
+<body>
+    <h1 class="h">
+        Словари и их методы
+    </h1>
+    <div class="c">
+        <div class="inner-cont">
+        <p>
+            Словарь <code><span lang="en" class="pink-marked">dict</span></code> – коллекция произвольных объектов с доступом по ключу
+        </p>
+        <p>
+            Ключ <code><span lang="en" class="pink-marked">key</span></code> – строка, число или кортеж
+        </p>
+        <p>
+            Значение <code><span lang="en" class="pink-marked">value</span></code> – любой тип данных
+        </p>
+        <p>
+            Элемент <code><span lang="en" class="pink-marked">item</span></code> – кортеж вида <code lang="en">(key, value)</code>
+        </p>
+        </div>
+        <div class="inner-cont">
+        <br>
+        <a href="#block1" class="a1">Создание словаря</a>
+        <a href="#block1.1" class="a2">Классический способ</a>
+        <a href="#block1.2" class="a2">Генератор</a>
+        <a href="#block1.3" class="a2">Функция <code lang="en">dict()</code></a>
+        <br>
+        <a href="#block2" class="a1">Методы словарей</a>
+        </div>
+        <div id="block1" class="block">
+            <h1>
+                Создание словаря
+            </h1>
+            <div id="block1.1" class="block">
+            <div class="inner-cont">
+            <h2>
+                1. Классика
+            </h2>
+            <p>
+                Короткий и многообразный словарь можно создать, поместив необходимые элементы в фигурные скобки. Этот способ силён, если необходимо быстро вручную записать несколько элементов. Особенно эффективен, если элементы состоят из разных типов данных. Приведём пример простого словаря, хранящего имена работников в разных офисах компании
+            </p>
+            <div class="co">
+            <code lang="en">
+                offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}<br>
+            </code>
+            </div>
+            <p>
+                Очевидный минус этого способа: им невозможно заполнить огромное количество данных
+            </p>
+            </div>
+            </div>
+            <div id="block1.2" class="block">
+            <div class="inner-cont">
+            <h2>
+                2. Генератор словарей
+            </h2>
+            <p>
+                Предположим, нам надо описать функцию <code><span lang="en" class="pink-marked">y = x² - 1</span></code> для всех целочисленных <code lang="en">x</code> на отрезке <code><span class="pink-marked">[1, 5]</span></code>. Это можно сделать следующим образом:
+            </p>
+            <div class="co">
+            <code lang="en">
+                dots = {x: x ** 2 - 1 for x in range(1, 6)}<br>
+                <br>
+                <span class="red">#{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</span>
+            </code>
+            </div>
+            <p>
+                Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к значению словаря
+            </p>
+            </div>
+            </div>
+            <div id="block1.3" class="block">
+            <div class="inner-cont">
+                <h2>
+                    3. Функция <span lang="en">dict([other])</span>
+                </h2>
+                <p>
+                    Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Если функция принимает на вход словарь, результатом будет тот же словарь, отсортированный по ключам. Приведём пример присвоения идентификационных номеров работникам из разных офисов
+                </p>
+                <div class="co">
+                <code lang="en">
+                    workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])<br>
+                    workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)<br>
+                    <br>
+                    <span class="red">#{"Ann": 1, "Igor": 2, "Kirill": 3, "Nataly": 4}</span>
+                </code>
+                </div>
+                <p>
+                    Обращаем внимание на то, что кавычки в последнем из примеров не нужны
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
