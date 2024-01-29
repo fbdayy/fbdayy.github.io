@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Короткий и многообразный словарь можно создать при помощи функции...">
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
@@ -12,144 +12,153 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 </head>
 <style>
-    :root {
+    :root{
         --mygreen: #f5fcf1;
         --mypink: #f4dde6;
         --myblue: #daeef9;
         --mygrey: #bfbcb8;
     }
 
-    @media (orientation: portrait) {
-        .c{
-            display: flex;
-            flex-direction: column;
-            align-items: top;
-            justify-content: center;
-            align-content: center;
-        }
-        
-        .marked{
-            padding: 1px 8px 1px 8px;
-            border-radius: 30px;
-        }
-        
-        p{
-            margin: 0, 0, 15px, 0;
-            text-align: left;
-            font-size: 2ex;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        .co{
-            border: 2px solid;
-            overflow-x: scroll;
-            overflow-y: scroll;
-            text-align: left;
-            border-radius: 30px;
-            padding: 15px 20px 15px 20px;
-        }
-        
-        .block{
-            border-radius: 30px;
-        }
-        
-        .block:target {
-            animation: anim .5s;
-        }
-        
-        @keyframes anim { 
-            0%, 100% {background: rgba(0,0,0,0);}
-            50% {background: #bbf2ff;}
-        }
-        
-        .a1{
-            font-size: 3ex;
-            margin-bottom: 20px;
-        }
-        
-        .a2{
-            font-size: 2ex;
-            margin-bottom: 10px;
-        }
-        
-        h1{
-            text-align: center;
-            vertical-align: top;
-            font-size: 4ex;
-            margin-block-end: 40px;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        h2{
-            text-align: center;
-            vertical-align: top;
-            font-size: 3ex;
-            margin-block-end: 40px;
-        }
-        
-        code{
-            font-size: 2ex;
-            white-space: nowrap;
-        }
-        
-        .inner-cont{
-            padding: 5px 20px 5px 20px;
-        }
-        
-        .sticker{
-            padding: 30px;
-            margin-top: 70px;
-            margin-bottom: 70px;
-            border-radius: 30px;
-            -webkit-box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
-            -moz-box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
-            box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
-        }
-        
-        :nth-child(-n + 1 of p.sticker){
-            background-color: var(--mygreen);
-        }
-        
-        :nth-child(2 of p.sticker){
-            background-color: var(--myblue);
-        }
-        
-        code.marked:nth-child(n){
-            background-color: var(--mypink);
-        }
-        
-        a{
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: #020250;
-            display: block;
-            position: relative;
-            max-width: max-content;
-        }
-        
-        a:hover {
-            color: #020250;
-        }
-        
-        a::before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #020250;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        a:hover::before {
-            transform: scaleX(1);
-        }
+    html{
+        font-family: 'Roboto', sans-serif;
     }
     
-    @media (orientation: landscape) {
+    @media (pointer:fine){
+        :root{
+            --myh1: 5ex;
+            --myh2: 4ex;
+            --myp: 3ex;
+        }
+    }
+
+    @media (pointer:coarse){
+        :root{
+            --myh1: 4ex;
+            --myh2: 3ex;
+            --myp: 2ex;
+        }
+    }
+
+    .c{
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .marked{
+        padding: 1px 8px 1px 8px;
+        border-radius: 30px;
+    }
+
+    .marked:nth-child(n){
+        background-color: var(--mypink);
+    }
+    
+    p{
+        text-align: left;
+        font-size: var(--myp);
+    }
+    
+    .co{
+        border: 2px solid;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        text-align: left;
+        font-size: var(--myp);
+        border-radius: 30px;
+        padding: 15px 20px 15px 20px;
+    }
+    
+    .block{
+        border-radius: 30px;
+    }
+    
+    .block:target {
+        animation: anim .5s;
+    }
+    
+    @keyframes anim { 
+        0%, 100% {background: rgba(0,0,0,0);}
+        50% {background: #bbf2ff;}
+    }
+    
+    .a1{
+        font-size: 4ex;
+        margin-bottom: 20px;
+    }
+    
+    .a2{
+        font-size: var(--myp);
+        margin-bottom: 10px;
+    }
+    
+    h1{
+        text-align: center;
+        vertical-align: top;
+        font-size: var(--myh1);
+        margin-block-end: 40px;
+    }
+    
+    h2{
+        text-align: center;
+        vertical-align: top;
+        font-size: var(--myh2);
+        margin-block-end: 40px;
+    }
+    
+    code{
+        white-space: nowrap;
+    }
+    
+    .inner-cont{
+        padding: 5px 20px 5px 20px;
+    }
+    
+    .sticker{
+        padding: 30px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
+    }
+    
+    #greenbg{
+        background-color: var(--mygreen);
+    }
+
+    #bluebg{
+        background-color: var(--myblue);
+    }
+    
+    a{
+        text-align: center;
+        color: #020250;
+        display: block;
+        text-decoration: none;
+        position: relative;
+        max-width: max-content;
+    }
+    
+    a:hover {
+        color: #020250;
+    }
+    
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #020250;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    a:hover::before {
+        transform: scaleX(1);
     }
 </style>
 <body>
@@ -165,10 +174,10 @@
             Ключ <code class="marked" lang="en">key</code> – строка, число или кортеж
         </p>
         <p>
-            Значение <code lang="en" class="marked">value</code> – любой тип данных
+            Значение <code class="marked" lang="en">value</code> – любой тип данных
         </p>
         <p>
-            Элемент <code lang="en" class="marked">item</code> – кортеж вида <code lang="en">(key, value)</code>
+            Элемент <code class="marked" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
         </div>
         <div class="inner-cont">
@@ -188,7 +197,7 @@
             <h2>
                 1. Классика
             </h2>
-            <p class="sticker">
+            <p class="sticker" id="greenbg">
                 Словарь можно создать, поместив необходимые элементы в фигурные скобки. Это сильнейший способ для создания короткого словаря, но наиболее бесполезный для словарей большего размера
             </p>
             <p>
@@ -215,7 +224,7 @@
             <p>
                 Предположим, нам надо описать функцию <code lang="en" class="marked">y = x² - 1</code> для всех целочисленных <code lang="en">x</code> на отрезке <code class="marked">[1, 5]</code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно будет крайне монотонен и скучен. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
             </p>
-            <p class="sticker">
+            <p class="sticker" id="greenbg">
                 По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
             </p>
             <div class="co">
@@ -231,7 +240,7 @@
             <p>
                 Плюс этого способа заключается в том, что для любой зависимости, поддающейся функциональному описанию, можно сгенерировать элемент при помощи компьютерных вычислений. Таким образом мы способны обрабатывать большое количество информации за короткий срок
             </p>
-            <p class=sticker>
+            <p class="sticker" id="bluebg">
                 Отлично, мы разобрались с тем, как быстро создать осмысленный словарь при помощи только что написанной функии. Но что делать, если элементы у нас уже есть, только записаны они в другом типе данных? Неужели придётся использовать циклы? Не придётся, ведь именно для таких случаев и припасена ещё одна коварная функция...
             </p>
             </div>
@@ -249,7 +258,7 @@
                     workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])<br>
                     workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)<br>
                     <br>
-                    <span class="red">#{"Ann": 1, "Igor": 2, "Kirill": 3, "Nataly": 4}</span>
+                    <span class="marked">#{"Ann": 1, "Igor": 2, "Kirill": 3, "Nataly": 4}</span>
                 </code>
                 </div>
                 <p>
