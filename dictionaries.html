@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
@@ -38,59 +37,11 @@
         }
     }
 
-    .c{
-        display: flex;
-        flex-direction: column;
-        align-items: top;
-        justify-content: center;
-        align-content: center;
-    }
-    
-    .marked{
-        padding: 1px 8px 1px 8px;
-        border-radius: 30px;
-    }
-
-    .marked:nth-child(n){
-        background-color: var(--mypink);
-    }
-    
     p{
         text-align: left;
         font-size: var(--myp);
     }
-    
-    .co{
-        border: 2px solid;
-        overflow-x: auto;
-        text-align: left;
-        font-size: var(--myp);
-        padding: 15px 20px 15px 20px;
-    }
-    
-    .block{
-        border-radius: 30px;
-    }
-    
-    .block:target {
-        animation: anim .5s;
-    }
-    
-    @keyframes anim { 
-        0%, 100% {background: rgba(0,0,0,0);}
-        50% {background: #bbf2ff;}
-    }
-    
-    .a1{
-        font-size: 4ex;
-        margin-bottom: 20px;
-    }
-    
-    .a2{
-        font-size: var(--myp);
-        margin-bottom: 10px;
-    }
-    
+
     h1{
         text-align: center;
         vertical-align: top;
@@ -104,32 +55,8 @@
         font-size: var(--myh2);
         margin-block-end: 40px;
     }
-    
-    code{
-        white-space: nowrap;
-    }
-    
-    .inner-cont{
-        padding: 5px 20px 5px 20px;
-    }
-    
-    .sticker{
-        padding: 30px;
-        margin-top: 70px;
-        margin-bottom: 70px;
-        border-radius: 30px;
-        box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
-    }
-    
-    #greenbg{
-        background-color: var(--mygreen);
-    }
 
-    #bluebg{
-        background-color: var(--myblue);
-    }
-    
-    a{
+        a{
         text-align: center;
         color: #020250;
         display: block;
@@ -156,6 +83,75 @@
     }
     a:hover::before {
         transform: scaleX(1);
+    }
+
+    .c{
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .marked{
+        padding: 1px 8px 1px 8px;
+        border-radius: 30px;
+        background-color: var(--mypink)
+    }
+    
+    .co{
+        border: 2px solid;
+        overflow-x: auto;
+        text-align: left;
+        font-size: var(--myp);
+        padding: 15px 20px 15px 20px;
+    }
+    
+    .a1{
+        font-size: var(--myh2);
+        margin-bottom: 20px;
+    }
+    
+    .a2{
+        font-size: var(--myp);
+        margin-bottom: 10px;
+    }
+    
+    code{
+        white-space: nowrap;
+    }
+    
+    .inner-cont{
+        padding: 5px 20px 5px 20px;
+    }
+    
+    .sticker{
+        padding: 30px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
+    }
+    
+    .greenbg{
+        background-color: var(--mygreen);
+    }
+
+    .bluebg{
+        background-color: var(--myblue);
+    }
+
+    .block{
+        border-radius: 30px;
+    }
+    
+    .block:target {
+        animation: anim .5s;
+    }
+    
+    @keyframes anim { 
+        0%, 100% {background: rgba(0,0,0,0);}
+        50% {background: #bbf2ff;}
     }
 </style>
 <body>
@@ -194,7 +190,7 @@
             <h2>
                 1. Классика
             </h2>
-            <p class="sticker" id="greenbg">
+            <p class="sticker" class="greenbg">
                 Словарь можно создать, поместив необходимые элементы в фигурные скобки. Это сильнейший способ для создания короткого словаря, но наиболее бесполезный для словарей большего размера
             </p>
             <p>
@@ -221,14 +217,14 @@
             <p>
                 Предположим, нам надо описать функцию <code lang="en" class="marked">y = x² - 1</code> для всех целочисленных <code lang="en">x</code> на отрезке <code class="marked">[1, 5]</code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно будет крайне монотонен и скучен. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
             </p>
-            <p class="sticker" id="greenbg">
+            <p class="sticker" class="greenbg">
                 По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
             </p>
             <div class="co">
             <code lang="en">
                 dots = {x: x ** 2 - 1 for x in range(1, 6)}<br>
                 <br>
-                <span class="red">#{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</span>
+                <span class="marked">#{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</span>
             </code>
             </div>
             <p>
@@ -237,7 +233,7 @@
             <p>
                 Плюс этого способа заключается в том, что для любой зависимости, поддающейся функциональному описанию, можно сгенерировать элемент при помощи компьютерных вычислений. Таким образом мы способны обрабатывать большое количество информации за короткий срок
             </p>
-            <p class="sticker" id="bluebg">
+            <p class="sticker" class="bluebg">
                 Отлично, мы разобрались с тем, как быстро создать осмысленный словарь при помощи только что написанной функии. Но что делать, если элементы у нас уже есть, только записаны они в другом типе данных? Неужели придётся использовать циклы? Не придётся, ведь именно для таких случаев и припасена ещё одна коварная функция...
             </p>
             </div>
