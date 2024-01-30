@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ">
+    <meta name="description" content="Страница может иметь проблемы в связи с использованием ранней версии pyscript">
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     <meta http-equiv="content-language" content="ru">
@@ -13,12 +14,8 @@
     <title>Самый подробный гайд по словарям на питоне</title>
 <style>
     :root{
-        --mygreen: #f5fcf1;
-        --myblue: #daeef9;
         --mygrey: #bfbcb8;
         --mygreen2: #00fd9e;
-        --mypink: #f4dde6;
-        /* f4dde6 f6f5f5 fbfbfb */
         --codebg: #fafafb;
     }
 
@@ -31,6 +28,38 @@
             --myh1: 5ex;
             --myh2: 4ex;
             --myp: 3ex;
+            --mypink: #ffd0e2;
+            --myblue: #5757fb;
+            --mygreen: #00fd9e;
+        }
+
+        .bluebg{
+            background-color: var(--myblue);
+            color: #e2e2fe;
+        }
+
+        .greenbg{
+            background-color: var(--mygreen);
+            color: #002a1b;
+        }
+
+        .pinkbg{
+            background-color: var(--mypink);
+            color: #570021;
+        }
+
+        .redbg{
+            background-color: red;
+            color: #ffe3e3;
+        }
+
+        .c{
+            display: flex;
+            flex-direction: column;
+            align-items: top;
+            justify-content: center;
+            align-content: center;
+            padding: 0% 20%;
         }
     }
 
@@ -39,6 +68,34 @@
             --myh1: 4ex;
             --myh2: 3ex;
             --myp: 2ex;
+            --mypink: #f4dde6;
+            --myblue: #daeef9;
+            --mygreen: #f5fcf1;
+        }
+
+        .bluebg{
+            background-color: var(--myblue);
+        }
+
+        .greenbg{
+            background-color: var(--mygreen);
+        }
+
+        .pinkbg{
+            background-color: var(--mypink);
+        }
+
+        .redbg{
+            font-weight: 500;
+            color: red;
+        }
+
+        .c{
+            display: flex;
+            flex-direction: column;
+            align-items: top;
+            justify-content: center;
+            align-content: center;
         }
     }
 
@@ -95,18 +152,11 @@
         margin-bottom: 40px;
         flex-direction: column;
     }
-
-    .c{
-        display: flex;
-        flex-direction: column;
-        align-items: top;
-        justify-content: center;
-        align-content: center;
-    }
     
     .marked{
         padding: 1px 8px 1px 8px;
         border-radius: 30px;
+        max-width: max-content;
     }
     
     .a1{
@@ -131,20 +181,8 @@
         box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
     }
     
-    .greenbg{
-        background-color: var(--mygreen);
-    }
-    
     .green2bg{
         background-color: var(--mygreen2);
-    }
-    
-    .bluebg{
-        background-color: var(--myblue);
-    }
-    
-    .pinkbg{
-        background-color: var(--mypink)
     }
 
     .block{
@@ -179,6 +217,10 @@
         <p>
             Элемент <code class="marked green2bg" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
+        <br>
+        <p class="marked redbg">
+            Страница может иметь проблемы в связи с использованием ранней версии <code lang="en">pyscript</code>
+        </p>
         </div>
         <div class="inner-cont">
         <br>
@@ -204,17 +246,19 @@
                 Всеми приведёнными далее способами можно создать пустой словарь, оставив незаполненным поле для аргумента. Да, именно поэтому так – {} невозможно создать пустое множество. Эта ниша уже занята словарями
             </p>
             <p>
-                Для примера создадим словарь, содержащий информацию об именах работников компании из разных офисов
+                Для примера создадим словарь, содержащий информацию об именах работников компании из разных офисов. Последняя строчка демонстрации необходима для корректного вывода данных. Рекомендуем её не изменять, хотя можно и поэкспериментировать
             </p>
             <div class="co">
+            <p>
             <py-repl>
 offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}
 
-#Следующая строчка нужна для корректного вывода данных. id элемента: "p1"
+#id: "p1"
 pyscript.write("p1", offices)
             </py-repl>
+            </p>
             <br>
-            <p id="p1">
+            <p id="p1" class="marked pinkbg">
                 Здесь будет ваш вывод
             </p>
             </div>
@@ -238,13 +282,15 @@ pyscript.write("p1", offices)
                 По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
             </p>
             <div class="co">
+            <p>
             <py-repl>
 dots = {x: x ** 2 - 1 for x in range(1, 6)}
 
 pyscript.write("p2", dots)
             </py-repl>
+            </p>
             <br>
-            <p id="p2">
+            <p id="p2" class="marked pinkbg">
                 Здесь будет ваш вывод
             </p>
             </div>
@@ -268,14 +314,16 @@ pyscript.write("p2", dots)
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Приведём пример присвоения идентификационных номеров работникам из разных офисов
                 </p>
                 <div class="co">
+                <p>
                 <py-repl>
 workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
 #workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)
 
 pyscript.write("p3", workers)
                 </py-repl>
+                </p>
                 <br>
-                <p id="p3">
+                <p id="p3" class="marked pinkbg">
                     Здесь могла бы быть ваша реклама :D
                 </p>
                 </div>
