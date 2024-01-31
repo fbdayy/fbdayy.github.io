@@ -10,15 +10,15 @@
     <meta http-equiv="content-language" content="ru">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<script>
+<script defer>
 hljs.highlightAll();
 </script>
     <title>Самый подробный гайд по словарям на питоне</title>
 <style>
     :root{
         --mygrey: #bfbcb8;
-        --mygreen2: #00fd9e;
         --codebg: #fafafb;
+        --mygreen: #00fd9e;
     }
 
     html{
@@ -32,27 +32,11 @@ hljs.highlightAll();
             --myp: 3ex;
             --mypink: #ffd0e2;
             --myblue: #5757fb;
-            --mygreen: #00fd9e;
-        }
-
-        .bluebg{
-            background-color: var(--myblue);
-            color: #e2e2fe;
-        }
-
-        .greenbg{
-            background-color: var(--mygreen);
-            color: #002a1b;
         }
 
         .pinkbg{
             background-color: var(--mypink);
             color: #570021;
-        }
-
-        .redbg{
-            background-color: red;
-            color: white;
         }
         
         .c{
@@ -71,12 +55,7 @@ hljs.highlightAll();
             --myh2: 3ex;
             --myp: 2ex;
             --mypink: #f4dde6;
-            --myblue: #daeef9;
-            --mygreen: #f5fcf1;
-        }
-
-        .bluebg{
-            background-color: var(--myblue);
+            --myblue: #007bf4;
         }
 
         .greenbg{
@@ -85,11 +64,6 @@ hljs.highlightAll();
 
         .pinkbg{
             background-color: var(--mypink);
-        }
-
-        .redbg{
-            font-weight: 500;
-            color: red;
         }
 
         .c{
@@ -107,6 +81,7 @@ hljs.highlightAll();
     }
 
     h1{
+        position: relative;
         text-align: center;
         vertical-align: top;
         font-size: var(--myh1);
@@ -156,7 +131,7 @@ hljs.highlightAll();
     }
     
     .pycode{
-        border: 1px black solid;
+        border: 1px var(--mygrey) solid;
         overflow-y: auto;
         padding: 0 0 0 10px;
         border-radius: 30px;
@@ -190,8 +165,19 @@ hljs.highlightAll();
         box-shadow: 0px 0px 19px 11px rgba(71, 72, 73, 0.09);
     }
     
-    .green2bg{
-        background-color: var(--mygreen2);
+    .greenbg{
+        background-color: var(--mygreen);
+        color: #002a1b;
+    }
+        
+    .bluebg{
+        background-color: var(--myblue);
+        color: white;
+    }
+    
+    .purplebg{
+        background-color: #5757fb;
+        color: white;
     }
     
     .block{
@@ -206,25 +192,42 @@ hljs.highlightAll();
         0%, 100% {background: rgba(0,0,0,0);}
         50% {background: #bbf2ff;}
     }
+    
+    .header{
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .first{
+        margin-top: 70px;
+    }
 </style>
 </head>
 <body>
-    <h1 class="h">
+    <div class="header purplebg">
+        <p>Самая милая и офигенная шапка</p>
+    </div>
+    <h1 class="first">
         Словари и их методы
     </h1>
     <div class="c">
         <div class="inner-cont">
         <p>
-            Словарь <code class="marked green2bg" lang="en">dict</code> – коллекция произвольных объектов с доступом по ключу</code>
+            Словарь <code class="marked greenbg" lang="en">dict</code> – коллекция произвольных объектов с доступом по ключу</code>
         </p>
         <p>
-            Ключ <code class="marked green2bg" lang="en">key</code> – строка, число или кортеж
+            Ключ <code class="marked greenbg" lang="en">key</code> – строка, число или кортеж
         </p>
         <p>
-            Значение <code class="marked green2bg" lang="en">value</code> – любой тип данных
+            Значение <code class="marked greenbg" lang="en">value</code> – любой тип данных
         </p>
         <p>
-            Элемент <code class="marked green2bg" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
+            Элемент <code class="marked greenbg" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
         </div>
         <div class="inner-cont">
@@ -296,7 +299,7 @@ print(dots)</code></pre></div>
             <p>
                 Вывод:
             </p>
-            <div class="pycode pinkbg"><pre><code class="python pinkbg">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</code></pre></div>
+            <div class="pycode"><pre><code class="python">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</code></pre></div>
             <p>
                 Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к словарю. Достаточно увеличить диапазон генерации и тут же ваш словарь станет в несколько раз содержательнее
             </p>
@@ -316,6 +319,10 @@ print(dots)</code></pre></div>
                 <p>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Приведём пример присвоения идентификационных номеров работникам из разных офисов
                 </p>
+                <br>
+                <p>
+                    Python:
+                </p>
                 <div class="pycode"><pre><code class="python">workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
 #workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)
 
@@ -324,7 +331,7 @@ print(workers)</code></pre></div>
             <p>
                 Вывод:
             </p>
-            <div class="pycode pinkbg"><pre><code class="python pinkbg">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
+            <div class="pycode"><pre><code class="python">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
                 <p>
                     Обращаем внимание на то, что кавычки в последнем из примеров не нужны
                 </p>
