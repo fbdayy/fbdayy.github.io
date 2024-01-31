@@ -104,11 +104,11 @@ hljs.highlightAll();
         max-width: max-content;
     }
     
-    a:hover {
+    a:hover{
         color: #020250;
     }
     
-    a::before {
+    a::before{
         content: "";
         position: absolute;
         display: block;
@@ -120,8 +120,13 @@ hljs.highlightAll();
         transform: scaleX(0);
         transition: transform 0.3s ease;
     }
-    a:hover::before {
+    
+    a:hover::before{
         transform: scaleX(1);
+    }
+
+    code{
+        font-size: var(--myp);
     }
     
     .co{
@@ -268,7 +273,7 @@ print(offices)</code></pre></div>
             <p>
                 Вывод:
             </p>
-            <div class="pycode pinkbg"><pre><code class="python pinkbg">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
+            <div class="pycode"><pre><code class="python">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
             <br>
             <p>
                 Сразу заметен огромный минус этого способа: им невозможно заполнить большое количество данных. В связи с этим, можно считать, что литералы рационально использовать только для создания словарей длиной не более пары десятков элементов
