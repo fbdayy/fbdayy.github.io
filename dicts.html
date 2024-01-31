@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,8 +8,11 @@
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     <meta http-equiv="content-language" content="ru">
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>
+hljs.highlightAll();
+</script>
     <title>Самый подробный гайд по словарям на питоне</title>
 <style>
     :root{
@@ -52,7 +54,7 @@
             background-color: red;
             color: white;
         }
-
+        
         .c{
             display: flex;
             flex-direction: column;
@@ -153,6 +155,13 @@
         flex-direction: column;
     }
     
+    .pycode{
+        border: 1px black solid;
+        overflow-y: auto;
+        padding: 0 0 0 10px;
+        border-radius: 30px;
+    }
+    
     .marked{
         padding: 1px 8px 1px 8px;
         border-radius: 30px;
@@ -184,7 +193,7 @@
     .green2bg{
         background-color: var(--mygreen2);
     }
-
+    
     .block{
         border-radius: 30px;
     }
@@ -217,10 +226,6 @@
         <p>
             Элемент <code class="marked green2bg" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
-        <br>
-        <p class="marked redbg">
-            Страница может иметь проблемы в связи с использованием ранней версии <code lang="en">pyscript</code>
-        </p>
         </div>
         <div class="inner-cont">
         <br>
@@ -240,28 +245,28 @@
                 1. Классика
             </h2>
             <p class="sticker greenbg">
-                Словарь можно создать  литералом. Это сильнейший способ для создания короткого словаря, но наиболее бесполезный для словарей большего размера. Поэтому любое выражение вида <code lang="en">{key1: value1, key2: value2}</code> можно по праву считать словарём
+                Словарь можно создать  литералом, поэтому любое выражение вида <code lang="en">{key1: value1, key2: value2}</code> можно по праву считать словарём. Пустой словарь можно создать любым из предложенных дадее способов, оставив незаполненным поле для аргумента
             </p>
             <p>
-                Всеми приведёнными далее способами можно создать пустой словарь, оставив незаполненным поле для аргумента. Да, именно поэтому так – {} невозможно создать пустое множество. Эта ниша уже занята словарями
+                Да, именно поэтому так – {} невозможно создать пустое множество. Эта ниша уже занята словарями
             </p>
             <p>
-                Для примера создадим словарь, содержащий информацию об именах работников компании из разных офисов. Последняя строчка демонстрации необходима для корректного вывода данных. Рекомендуем её не изменять, хотя можно и поэкспериментировать
-            </p>
-            <div class="co">
-            <p>
-            <py-repl>
-offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}
-
-#id: "p1"
-pyscript.write("p1", offices)
-            </py-repl>
+                Итак, литерал – это сильнейший способ для создания короткого словаря, но наиболее бесполезный для словарей большего размера. Для примера создадим словарь, содержащий информацию об именах работников компании из разных офисов
             </p>
             <br>
-            <p id="p1" class="marked pinkbg">
-                Здесь будет ваш вывод
+            <p lang="en">
+                Python:
             </p>
-            </div>
+            <div class="pycode">
+                <pre><code class="python">offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}
+
+print(offices)</code></pre></div>
+            <br>
+            <p>
+                Вывод:
+            </p>
+            <div class="pycode pinkbg"><pre><code class="python pinkbg">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
+            <br>
             <p>
                 Сразу заметен огромный минус этого способа: им невозможно заполнить большое количество данных. В связи с этим, можно считать, что литералы рационально использовать только для создания словарей длиной не более пары десятков элементов
             </p>
@@ -279,21 +284,19 @@ pyscript.write("p1", offices)
                 Предположим, нам надо описать функцию <code lang="en" class="marked pinkbg">y = x² - 1</code> для всех целочисленных <code lang="en">x</code> на отрезке <code class="marked pinkbg">[1, 5]</code>. Это можно сделать собственноручно. Однако что, если отрезок увеличить в несколько раз? Способ уже не будет столь эффективен, зато точно покажется вам крайне монотонным и скучным. Никому не хочется часами выполнять рутинную работу. Именно поэтому и существуют генераторы
             </p>
             <p class="sticker greenbg">
-                По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ. Предложенную выше математическую функцию мы можем описать следующим образом:
+                По природе своей генератор словаря почти ничем не отличается от генератора того же списка. Разница лишь в том, что для него необходимо указывать не только значение, но и ключ
             </p>
-            <div class="co">
             <p>
-            <py-repl>
-dots = {x: x ** 2 - 1 for x in range(1, 6)}
+                Предложенную выше математическую функцию мы можем описать следующим образом:
+            </p>
+            <div class="pycode"><pre><code class="python">dots = {x: x ** 2 - 1 for x in range(1, 6)}
 
-pyscript.write("p2", dots)
-            </py-repl>
-            </p>
+print(dots)</code></pre></div>
             <br>
-            <p id="p2" class="marked pinkbg">
-                Здесь будет ваш вывод
+            <p>
+                Вывод:
             </p>
-            </div>
+            <div class="pycode pinkbg"><pre><code class="python pinkbg">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</code></pre></div>
             <p>
                 Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к словарю. Достаточно увеличить диапазон генерации и тут же ваш словарь станет в несколько раз содержательнее
             </p>
@@ -313,20 +316,15 @@ pyscript.write("p2", dots)
                 <p>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Приведём пример присвоения идентификационных номеров работникам из разных офисов
                 </p>
-                <div class="co">
-                <p>
-                <py-repl>
-workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
+                <div class="pycode"><pre><code class="python">workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
 #workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)
 
-pyscript.write("p3", workers)
-                </py-repl>
-                </p>
-                <br>
-                <p id="p3" class="marked pinkbg">
-                    Здесь могла бы быть ваша реклама :D
-                </p>
-                </div>
+print(workers)</code></pre></div>
+            <br>
+            <p>
+                Вывод:
+            </p>
+            <div class="pycode pinkbg"><pre><code class="python pinkbg">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
                 <p>
                     Обращаем внимание на то, что кавычки в последнем из примеров не нужны
                 </p>
