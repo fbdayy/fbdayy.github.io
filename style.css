@@ -2,6 +2,7 @@
     --mygrey: #bfbcb8;
     --codebg: #fafafb;
     --mygreen: #00fd9e;
+    --myblue: #007bf4;
 }
 
 html{
@@ -14,7 +15,6 @@ html{
         --myh2: 4ex;
         --myp: 3ex;
         --mypink: #ffd0e2;
-        --myblue: #5757fb;
     }
 
     .pinkbg{
@@ -38,7 +38,6 @@ html{
         --myh2: 3ex;
         --myp: 2ex;
         --mypink: #f4dde6;
-        --myblue: #007bf4;
     }
 
     .greenbg{
@@ -78,6 +77,11 @@ h2{
     margin-block-end: 40px;
 }
 
+button{
+    height: 30px;
+    overflow: hidden;
+}
+
 a{
     text-align: center;
     color: #020250;
@@ -112,6 +116,18 @@ a:hover::before{
     margin-top: 40px;
     margin-bottom: 40px;
     flex-direction: column;
+}
+
+.pyexample{
+    align-items: center;
+    user-select: none;
+    display: flex;
+}
+
+.example{
+    align-self: top;
+    display: inline-block;
+    flex-grow: 1;
 }
 
 .pycode{
