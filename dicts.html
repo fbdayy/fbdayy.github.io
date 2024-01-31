@@ -130,10 +130,13 @@ print(dots)</code></pre></div>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Приведём пример присвоения идентификационных номеров работникам из разных офисов
                 </p>
                 <br>
-                <p>
+                <div class="pyexample">
+                <p class="example">
                     Python:
                 </p>
-                <div class="pycode"><pre><code class="python">workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
+                <button type="button" onclick="copy_data(example3)">copy</button>
+                </div>
+                <div class="pycode"><pre><code class="python" id="example3">workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
 #workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)
 
 print(workers)</code></pre></div>
@@ -149,5 +152,15 @@ print(workers)</code></pre></div>
             </div>
         </div>
     </div>
+<script>
+function copy_data(containerid) {
+  var range = document.createRange();
+  range.selectNode(containerid); //changed here
+  window.getSelection().removeAllRanges(); 
+  window.getSelection().addRange(range); 
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+}
+</script>
 </body>
 </html>
