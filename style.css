@@ -82,6 +82,9 @@ button{
     overflow: hidden;
 }
 
+button:hover {
+   }
+
 a{
     text-align: center;
     color: #020250;
@@ -206,4 +209,15 @@ a:hover::before{
 
 .first{
     margin-top: 140px;
+}
+
+.copybutton {
+    width: 30px;
+    height: 30px;
+    background-size: no-repeat;
+    background-position: center;
+    background-image: url("https://fbdayy.github.io/web/copyicon.svg");
+    border: 0px;
+    background-color: white;
+    background-size: cover;
 }
