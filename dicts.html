@@ -71,7 +71,7 @@ hljs.highlightAll();
                 <p class="example" lang="en">
                     Input
                 </p>
-                <button type="button" class="copybutton" onclick="copy_data(input1)"></button>
+                <button type="button" class="copybutton" onclick="copy_data(input1)" aria-label="Скопировать ввод для первого примера"></button>
             </div>
             <div class="pycode">
                 <pre><code class="python" id="input1" lang="en">offices = {'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}
@@ -82,7 +82,7 @@ print(offices)</code></pre></div>
             <p class="example" lang="en">
                 Output
             <p>
-            <button type="button" class="copybutton" onclick="copy_data(output1)"></button>
+            <button type="button" class="copybutton" onclick="copy_data(output1)" aria-label="Скопировать вывод пеивого примера"></button>
             </div>
             <div class="pycode" id="output1"><pre><code class="python" lang="en">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
             <br>
@@ -112,7 +112,7 @@ print(offices)</code></pre></div>
                 <p class="example" lang="en">
                     Input
                 </p>
-                <button type="button" class="copybutton" onclick="copy_data(input2)"></button>
+                <button type="button" class="copybutton" onclick="copy_data(input2)" aria-label="Скопировать ввод второго примера"></button>
             </div>
                 <div class="pycode"><pre><code class="python" id="input2" lang="en">dots = {x: x ** 2 - 1 for x in range(1, 6)}
 
@@ -122,7 +122,7 @@ print(dots)</code></pre></div>
             <p class="example" lang="en">
                 Output
             </p>
-            <button type="button" class="copybutton" onclick="copy_data(output2)"></button>
+            <button type="button" class="copybutton" onclick="copy_data(output2)" aria-label="Скопировать вывод второго примера"></button>
             </div>
             <div class="pycode" id="output2"><pre><code class="python" lang="en">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}}</code></pre></div>
             <p>
@@ -149,7 +149,7 @@ print(dots)</code></pre></div>
                 <p class="example" lang="en">
                     Input
                 </p>
-                <button type="button" class="copybutton" onclick="copy_data(example3)"></button>
+                <button type="button" class="copybutton" onclick="copy_data(example3)" aria-label="Скопировать ввод третьего примера"></button>
                 </div>
                 <div class="pycode"><pre><code class="python" id="example3" lang="en">workers = dict([("Ann", 1), ("Igor", 2), ("Kirill", 3), ("Nataly", 4)])
 #workers = dict(Ann=1, Igor=2, Kirill=3, Nataly=4)
@@ -160,7 +160,7 @@ print(workers)</code></pre></div>
             <p class="example" lang="en">
                 Output
             </p>
-            <button type="button" class="copybutton" onclick="copy_data(output2)"></button>
+            <button type="button" class="copybutton" onclick="copy_data(output3)" aria-label="Скопировать вывод третьего примера"></button>
             </div>
             <div class="pycode"><pre><code class="python" id="output3">{'office 1': ['Igor', 'Nataly'], 'office 2': ['Ann', 'Kirill']}</code></pre></div>
                 <p>
