@@ -1,5 +1,5 @@
 :root{
-    --mygrey: #bfbcb8;
+    --mygrey: #404040;
     --codebg: #fafafb;
     --mygreen: #00fd9e;
     --myblue: #007bf4;
@@ -137,6 +137,36 @@ button{
     transform: scaleX(1);
 }
 
+.awhite{
+    text-align: center;
+    color: white;
+    display: inline;
+    position: relative;
+    max-width: max-content;
+    text-decoration: none;
+}
+
+.awhite:hover{
+    color: white;
+}
+
+.awhite::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.awhite:hover::before{
+    transform: scaleX(1);
+}
+
 .co{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -215,6 +245,10 @@ button{
     color: white;
 }
 
+.greybg{
+    background-color: var(--mygrey);
+}
+
 .block{
     border-radius: 30px;
 }
@@ -233,13 +267,16 @@ button{
 }
 
 .first{
-    margin-top: 70px;
+    margin-top: 140px;
 }
 
 .footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    z-index: 1;
+    width: 100%;
+    height: var(--myheight);
 }
 
 .copybutton{
@@ -258,4 +295,16 @@ button{
     cursor: pointer;
     transition: background-image .7s;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no' ?%3e%3c!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='1000' height='1000' viewBox='0 0 1000 1000' xml:space='preserve'%3e%3cdesc%3eCreated with Fabric.js 5.3.0%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg transform='matrix(-1 0 0 -1 500 499.4588744589)' id='OT53iD2bywCHpifrgnMfo' %3e%3cg style='' %3e%3cg transform='matrix(1.8905422174 0 0 1.8905422174 -97.9437241266 97.4025985854)' id='l8kar7RCYy_Kay12KP7jl' %3e%3cpath style='stroke: rgb(0, 123, 244); stroke-width: 20; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;' transform=' translate(0, 0)' d='M -202.38095 -116.51798 C -202.38095 -163.93878999999998 -163.93879 -202.38094999999998 -116.51798000000001 -202.38094999999998 L -98.74855000000001 -202.38094999999998 L -98.73570000000001 12.545510000000007 L -98.73570000000001 12.545510000000007 C -98.73287 59.908480000000004 -60.481570000000005 98.37856000000001 -13.119380000000007 98.65152 L 202.38096 99.89347000000001 L 202.38096 116.51799000000001 L 202.38096 116.51799000000001 C 202.38096 163.93880000000001 163.9388 202.38096000000002 116.51798999999998 202.38096000000002 L -116.51798000000001 202.38096000000002 L -116.51798000000001 202.38096000000002 C -163.93879 202.38096000000002 -202.38095 163.93880000000001 -202.38095 116.51799000000001 z' stroke-linecap='round' /%3e%3c/g%3e%3cg transform='matrix(1.8905422174 0 0 1.8905422174 97.9437128596 -97.4025873185)' id='ruMJrI-58_ixwibAYTnqP' %3e%3cpath style='stroke: rgb(0, 123, 244); stroke-width: 20; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;' transform=' translate(-0.000005, -0.000005)' d='M -202.38095 -116.51798 C -202.38095 -163.93878999999998 -163.93879 -202.38094999999998 -116.51798000000001 -202.38094999999998 L 116.51798999999998 -202.38094999999998 L 116.51798999999998 -202.38094999999998 C 163.9388 -202.38094999999998 202.38096 -163.93878999999998 202.38096 -116.51797999999998 L 202.38096 116.51799000000001 L 202.38096 116.51799000000001 C 202.38096 163.93880000000001 163.9388 202.38096000000002 116.51798999999998 202.38096000000002 L -116.51798000000001 202.38096000000002 L -116.51798000000001 202.38096000000002 C -163.93879 202.38096000000002 -202.38095 163.93880000000001 -202.38095 116.51799000000001 z' stroke-linecap='round' /%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: var(--myheight);
 }
