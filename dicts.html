@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,17 +8,23 @@
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     <meta http-equiv="content-language" content="ru">
+    <link rel="icon" href="https://fbdayy.github.io/web/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script defer>
 hljs.highlightAll();
 </script>
+<script>
+</script>
     <title>Самый подробный гайд по словарям на питоне</title>
 <style>
 </style>
 </head>
 <body>
+    <div class="header purplebg">
+    <p><a href="/index" class="awhite" target="_blank">На главную</a></p><p><a href="/strings" class="awhite" target="_blank">Строки</a></p>
+    </div>
     <h1 class="first">
         Всё о словарях
     </h1>
@@ -32,7 +37,7 @@ hljs.highlightAll();
             Важно запомнить, что словарь – неупорядоченная структура, поэтому не поддаётся индексации, и обратиться к его элементам можно только по ключу
         </p>
         <p>
-            Ключ <code class="marked greenbg" lang="en">key</code> – <a href="/strings" class="a2 a" style="display: inline">строка</a>, число или кортеж
+            Ключ <code class="marked greenbg" lang="en">key</code> – <a href="/strings" class="a" style="display: inline" target="_blank">строка</a>, число или кортеж
         </p>
         <p>
             Значение <code class="marked greenbg" lang="en">value</code> – любой тип данных
@@ -147,7 +152,7 @@ print(dots)</code></pre></div>
                     3. Функция <span lang="en">dict()</span>
                 </h2>
                 <p>
-                    <code lang="en" class="marked greenbg">dict(other)</code> – функция для создания словаря. Может принимать список, кортеж и т.п.
+                    <code lang="en" class="marked greenbg">dict(other)</code> <code lang="en">-> dict</code> – функция для создания словаря. Может принимать в <code lang="en">other</code> список, кортеж и т.п.
                 </p>
                 <p>
                     Функция создаёт элементы словаря из произвольного количества упорядоченных пар. Предположим, нам надо пронумеровать всех работников в отдельном словаре. Приведём пример реализации двух удобнейших вариантов присвоения <code lang="en" class="marked pinkbg">id</code> работникам из разных офисов
@@ -190,7 +195,7 @@ print(workers_id)</code></pre></div>
                 Добавить элемент в словарь можно, присвоив его ключу значение. Пример добавления новой точки для нашей математичекой функции выглядит незамысловато: <code class="marked greenbg" lang="en">dots[6] = 36</code>. Теперь в нашем словаре есть и значение точки с абциссой, равной 6
             </p>
             <p class="sticker redbg">
-                Важно помнить, что ключом для словаря могут стать только числа, строки или кортежи. Ничего кроме них!
+                Важно помнить, что ключом для словаря могут стать только числа, строки или кортежи. Ничего кроме них
             </p>
             <p>
                 Это как раз одна из причин существования кортежей и одно из их преимуществ по сравнению с вездесущими списками
@@ -262,34 +267,34 @@ print(offices, workers_id, sep="\n")</code></pre></div>
                 В версиях <code lang="en">Python 2</code> и младше методы <code lang="en">dict.items(), dict.values()</code> и <code lang="en">dict.keys()</code> возвращают копию списка, но в более старших используют для обращения не список, а его представление, поэтому и возвращает не список, а объект класса dict_items, dict_keys или dict_values (условно говоря, генератор). По нему возможно пройтись циклом, но невозможно сравнить, обратиться по индексу, отсортировать и многое-многое другое. поэтому для нормального взаимодействия следует преобразовать его в список, кортеж или множество и работать в дальнейшем с ними
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.clear()</code> – очищает словарь
+                <code lang="en" class="marked greenbg">dict.clear()</code> <code lang="en"> -> None</code> – очищает словарь <code lang="en">dict</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.copy()</code> – возвращает копию словаря
+                <code lang="en" class="marked greenbg">dict.copy()</code> <code lang="en">-> dict</code> – возвращает копию словаря <code lang="en">dict</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg" id="get">dict.get(key, default=None)</code> – пытается вернуть значение по введённому ключу. Если не находит ключа, возвращает дефолтное значение. По умолчанию: <code lang="en">None</code>
+                <code lang="en" class="marked greenbg" id="get">dict.get(key, [,default])</code> <code lang="en">-> value</code> – пытается вернуть значение словаря <code lang="en">dict</code> по введённому ключу <code lang="en">key</code>. Если не находит ключа, возвращает значение <code lang="en">default</code>. (автоматически: <code lang="en">None</code>)
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.items()</code> – возвращает список кортежей вида <code lang="en">[(key1, value1), (key2, value2)]</code>
+                <code lang="en" class="marked greenbg">dict.items()</code> <code lang="en">-> dict_items(list)</code> – возвращает список кортежей словаря <code lang="en">dict</code> вида <code lang="en">dict_items([(key1, value1), (key2, value2)])</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.keys()</code> – возвращает список ключей вида <code lang="en">[key1, key2]</code>
+                <code lang="en" class="marked greenbg">dict.keys()</code> <code lang="en">-> dict_keys(list)</code> – возвращает список ключей словаря <code lang="en">dict</code> вида <code lang="en">dict_keys([key1, key2])</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg" id="pop">dict.pop(key, default=None)</code> – удаляет значение с указанным ключом. Если не находит ключа, возвращает дефолтное значение. По умолчанию: <code lang="en">None</code>
+                <code lang="en" class="marked greenbg" id="pop">dict.pop(key, [,default])</code> <code lang="en">-> value</code> – удаляет значение из словаря <code lang="en">dict</code> с указанным ключом <code lang="en">key</code>. Если не находит ключа, возвращает значение <code lang="en">default</code>. (автоматически: <code lang="en">None</code>)
             </p>
             <p>
-                <code lang="en" class="marked greenbg" id="popitem">dict.popitem()</code> – удаляет последнее добавленное значение и возвращает удалённый элемент
+                <code lang="en" class="marked greenbg" id="popitem">dict.popitem()</code> <code lang="en">-> tuple</code> – удаляет последнее добавленное значение словаря <code lang="en">dict</code> и возвращает удалённый элемент вида
             </p>
             <p>
-                <code lang="en" class="marked greenbg" id="setdefault">dict.setdefault(key, default=None)</code> – возвращает значение с указанным ключом. Если не находит ключа, создаёт элемет словаря с указанным ключом, присваивая ему дефолтное значение. По умолчанию: <code lang="en">None</code>
+                <code lang="en" class="marked greenbg" id="setdefault">dict.setdefault(key, [,default])</code> <code lang="en">-> value</code> – возвращает значение <code lang="en">value</code> по указанному ключу <code lang="en">key</code>. Если не находит ключа, создаёт элемет словаря с указанным ключом, присваивая ему значение <code lang="en">default</code>. (автоматически: <code lang="en">None</code>)
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.update(other)</code> – обновляет словарь, создавая новые элементы и перезаписывая старые. Может принимать в себя кортеж, список и т.п.
+                <code lang="en" class="marked greenbg">dict.update(other)</code> <code lang="en">-> None</code> – обновляет словарь <code lang="en">dict</code>, создавая новые элементы и перезаписывая старые. Может принимать в себя кортеж, список и т.п. <code lang="en">other</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.values()</code> – Возвращает список значений вида <code lang="en">[value1, value2]</code>
+                <code lang="en" class="marked greenbg">dict.values()</code> <code lang="en">-> dict_values(list)</code> – Возвращает список значений вида <code lang="en">dict_values([value1, value2])</code>
             </p>
             <div class="pyexample">
                 <p class="example" lang="en">
@@ -478,8 +483,14 @@ for i, j in sorted(a.items(), key=lambda x: x[1]):
 31      100</code></pre></div>
             </div>
             </div>
-    <p class="first">
-        Нашли ошибку? Сообщите об этом нам. <a href="https://forms.yandex.ru/cloud/65bd5711693872387d8cfb7f/" class="a2 a" style="display: inline">Форма обратной связи</a></p>
+            </div>
+            <p class="first">
+        Нашли ошибку? Сообщите об этом нам. <a href="https://forms.yandex.ru/cloud/65bd5711693872387d8cfb7f/" class="a" style="display: inline" target="_blank">Форма обратной связи</a></p>
+            </div>
+            </div>
+    <div class="footer greybg">
+    <p><a href="https://t.me/fbdayy" class="awhite" target="_blank">Telegram</a></p><p><a href="https://github.com/fbdayy" class="awhite" target="_blank">Github</a></p><p><a href="https://vk.com/fbdayy" class="awhite" target="_blank">VK</a></p>
+    </div>
 <script async>
 function copy_data(containerid) {
   var range = document.createRange();
@@ -488,6 +499,16 @@ function copy_data(containerid) {
   window.getSelection().addRange(range); 
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
+}
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script defer>
+let bShow = document.querySelectorAll('button');
+
+for (let i = 0; i < bShow.length; i++) {
+  bShow[i].onclick = function(){
+      swal("Copied", "", "success")
+      ;}
 }
 </script>
 </body>
