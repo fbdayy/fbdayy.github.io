@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,6 +8,7 @@
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     <meta http-equiv="content-language" content="ru">
+    <link rel="icon" href="https://fbdayy.github.io/web/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
     <link href="style.css" rel="stylesheet" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
@@ -79,6 +79,7 @@ hljs.highlightAll();
             <p>
             <code class="marked greenbg" lang="en">\t</code> – горизонтальная табуляция. Горизонтально разделяет элементы автоматически подобранным количеством пробелов
             </p>
+            <p>
             <code class="marked greenbg" lang="en">\v</code> – вертиральная табуляция. Вертикально разделяет элементы автоматически подобранным количеством пробелов
             </p>
             <p>
@@ -157,7 +158,7 @@ hljs.highlightAll();
                 2. Функция <code lang="en">str()</code>
             </h2>
             <p>
-            <code class="marked greenbg" lang="en">str([,any]) -> str</code> – функция, создающая строку из любого типа данных. При незаполнении any создаётся пустая строка
+            <code class="marked greenbg" lang="en">str([,any])</code> <code>-> str</code> – функция, создающая строку из любого типа данных. При незаполнении any создаётся пустая строка
             </p>
             <div class="pyexample">
                 <p class="example" lang="en">
@@ -397,7 +398,7 @@ word[1:-1:3] = лтсн</code></pre></div>
                 Для повторного присвоения можно использовать операторы <code class="marked greenbg">*=</code> или <code class="marked greenbg">*=</code>. Но можно присвоить строке новое значение, призвав и изменив её
             </p>
             <p>
-                Строка поддаётся форматированию. если написать перед кавычками символ f, то внутри строки конструкции вида <code>{a}</code> будут замяняться на значение переменной a. Выглядит это так: <code>f"text {a} text{a}text"</code>. Вместо любой из a можно подставить любую другую переменную. Аналогичное действие совершает функция <a href="#format" class="a2 a" style="display: inline"><code>format()</code></a>
+                Строка поддаётся форматированию. Если написать перед кавычками символ f, то внутри строки конструкции вида <code>{a}</code> будут замяняться на значение переменной a. Выглядит это так: <code class="marked">f"text {a} text{a}text"</code>. Вместо любой из a можно подставить любую другую переменную. Аналогичное действие совершает функция <a href="#format" class="a" style="display: inline"><code>format()</code></a>
             </p>
             </div>
             </div>
@@ -413,7 +414,7 @@ word[1:-1:3] = лтсн</code></pre></div>
                 Любая непустая строка считается правдой. Притом даже невидимые символы считаются для строки её наполнением, поэтому строка, состоящая из пробела или переноса строки будет правдива. Тождественное сравнение строк совершается оператором <code lang="en" class="marked greenbg">==</code>. Хотя, куда важнее и интереснее сравнивать строки другими логическими операторами
             </p>
             <p class="sticker greenbg">
-                Сравнение строк идёт посимвольно слева направо и большей считается та строка, у которой символ будет иметь больший код. Узнать код символа можно при помощи функции <a href="#ord" class="a2 a" style="display: inline"><code>ord()</code></a>. Если сравниваемый символ один и тот же, сравниваются следующие символы. В случае, если ожна строка является началом другой больше будет строка большей длины. Иначе они будут равны
+                Сравнение строк идёт посимвольно слева направо и большей считается та строка, у которой символ будет иметь больший код. Узнать код символа можно при помощи функции <a href="#ord" class="a" style="display: inline"><code>ord()</code></a>. Если сравниваемый символ один и тот же, сравниваются следующие символы. В случае, если ожна строка является началом другой больше будет строка большей длины. Иначе они будут равны
             </p>
             <p>
                 Сравнение производится теми же логическими операторами, что и сравнение всего остального: <code lang="en" class="marked greenbg"><</code>, <code lang="en" class="marked greenbg"><=</code>, <code lang="en" class="marked greenbg">></code> и <code lang="en" class="marked greenbg">>=</code>
@@ -701,7 +702,12 @@ ord('О'):       1054</code></pre></div>
         </div>
         </div>
     <p class="first">
-        Нашли ошибку? Сообщите об этом нам. <a href="https://forms.yandex.ru/cloud/65bd5711693872387d8cfb7f/" class="a2 a" style="display: inline">Форма обратной связи</a></p>
+        Нашли ошибку? Сообщите об этом нам. <a href="https://forms.yandex.ru/cloud/65bd5711693872387d8cfb7f/" class="a" style="display: inline" target="_blank">Форма обратной связи</a></p>
+    </div>
+    </div>
+    <div class="footer greybg">
+    <p><a href="https://t.me/fbdayy" class="awhite" target="_blank">Telegram</a></p><p><a href="https://github.com/fbdayy" class="awhite" target="_blank">Github</a></p><p><a href="https://vk.com/fbdayy" class="awhite" target="_blank">VK</a></p>
+    </div>
 <script async>
 function copy_data(containerid) {
   var range = document.createRange();
@@ -710,6 +716,16 @@ function copy_data(containerid) {
   window.getSelection().addRange(range); 
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
+}
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script defer>
+let bShow = document.querySelectorAll('button');
+
+for (let i = 0; i < bShow.length; i++) {
+  bShow[i].onclick = function(){
+      swal("Copied", "", "success")
+      ;}
 }
 </script>
 </body>
