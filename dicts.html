@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -20,7 +21,7 @@ hljs.highlightAll();
 </head>
 <body>
     <h1 class="first">
-        Словари и их методы
+        Всё о словарях
     </h1>
     <div class="c">
         <div class="inner-cont">
@@ -31,13 +32,13 @@ hljs.highlightAll();
             Важно запомнить, что словарь – неупорядоченная структура, поэтому не поддаётся индексации, и обратиться к его элементам можно только по ключу
         </p>
         <p>
-            Ключ <code class="marked greenbg" lang="en">key</code> – строка, число или кортеж
+            Ключ <code class="marked greenbg" lang="en">key</code> – <a href="/strings" class="a2 a" style="display: inline">строка</a>, число или кортеж
         </p>
         <p>
             Значение <code class="marked greenbg" lang="en">value</code> – любой тип данных
         </p>
         <p>
-            Элемент <code class="marked greenbg" lang="en">item</code> – кортеж вида <code lang="en" class="marked pinkbg">(key, value)</code>
+            Элемент <code class="marked greenbg" lang="en">item</code> – кортеж вида <code lang="en">(key, value)</code>
         </p>
         </div>
         <div class="inner-cont">
@@ -62,7 +63,7 @@ hljs.highlightAll();
                 1. Классика
             </h2>
             <p class="sticker greenbg">
-                Словарь можно создать  литералом, поэтому любое выражение вида <code lang="en">{key1: value1, key2: value2}</code> можно по праву считать словарём. Пустой словарь можно создать любым из предложенных далее способов, оставив незаполненным поле для аргумента
+                Словарь можно создать  литералом, поэтому любое выражение вида <code lang="en">{key1: value1, key2: value2}</code> можно по праву считать словарём. Пустой словарь можно создать любым из предложенных способов, оставив незаполненным поле для аргумента
             </p>
             <p>
                 Да, именно поэтому так – {} невозможно создать пустое множество. Эта ниша уже занята словарями
@@ -128,7 +129,7 @@ print(dots)</code></pre></div>
             </p>
             <button type="button" class="copybutton" onclick="copy_data(output2)" aria-label="Скопировать вывод второго примера"></button>
             </div>
-            <div class="pycode" id="output2"><pre><code class="python" lang="en">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}}</code></pre></div>
+            <div class="pycode" id="output2"><pre><code class="python" lang="en">{1: 0, 2: 3, 3: 8, 4: 15, 5: 24}</code></pre></div>
             <p>
                 Теперь в словаре для любой целочисленной абциссы на заданном отрезке будет храниться её ордината, что позволит получить значение функции, просто обратившись к словарю. Достаточно увеличить диапазон генерации и тут же ваш словарь станет в несколько раз содержательнее
             </p>
@@ -203,11 +204,14 @@ print(workers_id)</code></pre></div>
             <p>
                 Так при попытке призвать <code class="red" lang="en">dots[7]</code> мы увидим ошибку неверного ключа: <code class="red" lang="en">KeyError: 7</code>
             </p>
+            <p class="sticker redbg">
+                Для избежания ошибок в таких случаях существуют методы <code><a href="#get" class="redbg" lang="en">dict.get()</a></code> и <code><a href="#setdefault" class="redbg" lang="en">dict.setdefault()</a></code>
+            </p>
             <p>
                 Удалить элемент можно оператором <code lang="en" class="marked greenbg">del</code>. Например, для словаря <code lang="en" class="marked pinkbg">a = {1: 3}</code> удаление элемента будет выглядеть как <code lang="en" class="marked greenbg">del a[1]</code>
             </p>
             <p class="sticker redbg">
-                Оператор <code lang="en">del</code> довольно опасен, поскольку, забыв указать ключ, вы удалите весь словарь, а указав несуществующий ключ получите всё ту же KeyError. Для избежания ошибок в таких случаях существуют методы <code><a href="#get" class="redbg" lang="en">dict.get()</a></code> и <code><a href="#setdefault" class="redbg" lang="en">dict.setdefault()</a></code>
+                Оператор <code lang="en">del</code> довольно опасен, поскольку, забыв указать ключ, вы удалите весь словарь, а указав несуществующий ключ получите всё ту же KeyError. Для избежания ошибок в таких случаях существуют методы <code><a href="#pop" class="redbg" lang="en">dict.pop()</a></code> и <code><a href="#popitem" class="redbg" lang="en">dict.popitem()</a></code>
             </p>
             <p>
                 Изменить элемент можно комбинацией двух действий. Если в первый офис одного из примеров выше придёт работать Олег, необходимо будет его записать в список. Также нам стоит присвоить ему <code lang="en" class="marked pinkbg">id</code> в другом списке. Обратимся к словарям, чтоб обновить данные: 
@@ -243,12 +247,12 @@ print(offices, workers_id, sep="\n")</code></pre></div>
                 2. Логика и длины словарей
             </h2>
             <p>
-                Проверить вхождение ключа в словарь можно при помощи логического оператора <code lang="en" class="marked greenbg">in</code>, проверить наличие однако значения так не выйдет. Длина словаря определяется классической функцией <code lang="en" class="marked greenbg">len(dict)</code>, и равна она количеству ключей словаря. Выяснить, какой словарь больше, невозможно, поскольку для словарей можно только проверить равенство. И используется для этого уже знакомый нам логический оператор <code lang="en" class="marked greenbg">==</code>
+                Проверить вхождение ключа в словарь можно при помощи логического оператора <code lang="en" class="marked greenbg">in</code>, проверить наличие однако значения так не выйдет. Длина словаря определяется классической функцией <code lang="en" class="marked greenbg">len(dict)</code>, и равна она количеству ключей словаря. Выяснить, какой словарь больше, невозможно, поскольку для словарей можно только проверить равенство. И используется для этого уже знакомый нам логический оператор <code lang="en" class="marked greenbg">==</code>. Напоминаем, что любой ненулевой словарь является правдой
             </p>
         </div>
         </div>
-        <div class="block">
-        <div class="inner-cont" id="block2.3">
+        <div id="block2.3" class="block">
+            <div class="inner-cont">
             <h2>
                 3. Методы
             </h2>
@@ -273,10 +277,10 @@ print(offices, workers_id, sep="\n")</code></pre></div>
                 <code lang="en" class="marked greenbg">dict.keys()</code> – возвращает список ключей вида <code lang="en">[key1, key2]</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.pop(key, default=None)</code> – удаляет значение с указанным ключом. Если не находит ключа, возвращает дефолтное значение. По умолчанию: <code lang="en">None</code>
+                <code lang="en" class="marked greenbg" id="pop">dict.pop(key, default=None)</code> – удаляет значение с указанным ключом. Если не находит ключа, возвращает дефолтное значение. По умолчанию: <code lang="en">None</code>
             </p>
             <p>
-                <code lang="en" class="marked greenbg">dict.popitem()</code> – удаляет последнее добавленное значение
+                <code lang="en" class="marked greenbg" id="popitem">dict.popitem()</code> – удаляет последнее добавленное значение и возвращает удалённый элемент
             </p>
             <p>
                 <code lang="en" class="marked greenbg" id="setdefault">dict.setdefault(key, default=None)</code> – возвращает значение с указанным ключом. Если не находит ключа, создаёт элемет словаря с указанным ключом, присваивая ему дефолтное значение. По умолчанию: <code lang="en">None</code>
@@ -321,8 +325,7 @@ print(f"Достаём из b значение по несуществующем
 
 print(f"Сейчас b: {b}", end=e)
 
-b.popitem()
-print("Удалили последний элемент b")
+print("Удалили последний элемент b:", b.popitem())
 
 k = 1
 
@@ -360,7 +363,7 @@ b: {1: 1, 2: 4, 3: 9}
 Достаём из b значение по несуществующему ключу 4: такого ключа нет
 Сейчас b: {1: 1, 2: 4, 3: 9}
 --------------------------------------------------
-Удалили последний элемент b
+Удалили последний элемент b: (3, 9)
 Удаляем из b элемент с ключом 1. Его значение: 1
 Сейчас b: {2: 4}
 --------------------------------------------------
@@ -375,8 +378,8 @@ b: {1: 1, 2: 4, 3: 9}
             </div>
         </div>
         </div>
-        <div class="block">
-        <div class="inner-cont" id="block2.4">
+        <div id="block2.4" class="block">
+            <div class="inner-cont">
             <h2>
                 4. Циклы и псевдосортировка
             </h2>
@@ -385,6 +388,9 @@ b: {1: 1, 2: 4, 3: 9}
             </p>
             <p class="sticker redbg">
                 Важно понимать, что во время обращения к словарю напрямую в цикле for мы проходимся только по его ключам. Чтоб получить значения таким способом придётся обратиться к словарю ещё раз
+            </p>
+            <p>
+                Всё проимходящее далее вы и сами прекрасно поймёте, поэтому предлагаем вам просто взглянуть на пример
             </p>
             <div class="pyexample">
                 <p class="example" lang="en">
