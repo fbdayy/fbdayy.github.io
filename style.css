@@ -85,6 +85,16 @@ h1{
     margin-block-end: 40px;
 }
 
+.img_wrapper {
+    width: 100%;
+    position: relative;
+}
+.img_wrapper  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 h2{
     text-align: center;
     vertical-align: top;
@@ -99,7 +109,7 @@ button{
 
 .a{
     text-align: center;
-    color: #020250;
+    color: var(--myblue);
     display: block;
     position: relative;
     max-width: max-content;
@@ -107,7 +117,7 @@ button{
 }
 
 .a:hover{
-    color: #020250;
+    color: var(--myblue);
 }
 
 .a::before{
@@ -118,7 +128,7 @@ button{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #020250;
+    background-color: var(--myblue);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
