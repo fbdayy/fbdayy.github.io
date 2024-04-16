@@ -35,15 +35,6 @@ select{
     -webkit-tap-highlight-color: transparent;
 }
 
-.main{
-    height: calc(100vw * (9 / 14));
-    flex-direction: column;
-    align-content: center;
-    background-repeat: no-repeat;
-    user-select: text;
-    vertical-align: middle;
-}
-
 .up{
     text-transform: uppercase;
 }
@@ -70,6 +61,17 @@ select{
     font-style: normal;
     text-decoration: none;
     font-weight: 300;
+}
+
+.main{
+    height: calc(100vw * (9 / 14));
+    flex-direction: column;
+    align-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://fbdayy.ru/static/images/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: text;
+    vertical-align: middle;
 }
 
 .white{
@@ -115,7 +117,7 @@ select{
 
 .footer{
     background: #220300;
-    padding: 4% 0 4% 4%;
+    padding: 2% 0 4% 4%;
 }
 
 .last{
