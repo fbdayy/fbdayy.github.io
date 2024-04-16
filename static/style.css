@@ -36,7 +36,7 @@ select{
 }
 
 .main{
-    height: calc(100% * (9 / 14));
+    height: calc(100vw * (9 / 14));
     flex-direction: column;
     align-content: center;
     background-repeat: no-repeat;
