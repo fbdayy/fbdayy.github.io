@@ -1,129 +1,158 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+@media (orientation: landscape){
+.montserrat-500{
+    font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+ }
+.montserrat-400{
+    font-size: calc(8px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+}
+.montserrat-300{
+    font-size: calc(6px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+ }
+select{
+    width: 96vw;
+    height: 14vh;
+ }
+.main{
+    height: calc(100vw * (9 / 14));
+    flex-direction: column;
+    align-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    user-select: text;
+    vertical-align: middle;
+}
+}
+
+@media (orientation: portrait){
+.montserrat-500{
+    font-size: calc(12px + 16 * (100vw / 1280));
+ }
+.montserrat-400{
+    font-size: calc(8px + 16 * (100vw / 1280));
+ }
+.montserrat-300{
+    font-size: calc(3px + 16 * (100vw / 1280));
+ }
+select{
+    height: 8vh;
+    width: 94vw;
+ }
+.main{
+    height: calc(100vw * (9 / 14));
+    flex-direction: column;
+    align-content: center;
+    background-repeat: no-repeat;
+    user-select: text;
+    vertical-align: middle;
+}
+}
+
+.default{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.up{
+    text-transform: uppercase;
+}
+
+.montserrat-500{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.montserrat-400{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.montserrat-300{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.white{
+    color: white;
+}
+
+.salmon{
+    color: #ff8562;
+}
+
+.inner-block{
+    margin: 10% 40vw 10% 3vw;
+    display: inline-block;
+    vertical-align: middle;
     
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    
-    <title>Тест</title>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    
-    
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    <link
-        rel="stylesheet" 
-        href="https://fbdayy.ru/static/style.css"
-    />
-    
-          
-          
-</head>
-<body class="multiply">
-    <a
-        data-fancybox
-        href="https://fbdayy.ru/static/images/main.jpg"
-        class="default white">
-    <div class="main" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://fbdayy.ru/static/images/main.jpg); background-attachment: fixed;  background-size: 100%;">
-        <div class="inner-block">
-            <p class="montserrat-500" style="cursor: text; user-select: all; pointer-events: none;">Приятно<br />познакомиться!</p>
-            <p class="montserrat-300" style="cursor: text; user-select: all; pointer-events: none;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p>
-        </div>
-    </div>
-    </a>
-    <div class="central">
-        <select aria-label="Default select example" padding="14px" class="montserrat-400" id="categories">
-            <option selected value="1">Портреты</option>
-            <option value="2">Стрит</option>
-        </select>
-    </div>
-    <div id="block1" style="display:block">
-    <div class="multy">
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/portrait_1.jpg">
-        <img src="https://fbdayy.ru/static/images/portrait_1.jpg" class="fluid" alt="portrait_1" />
-    </a>
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/portrait_2.jpg">
-        <img src="https://fbdayy.ru/static/images/portrait_2.jpg" class="fluid" alt="portrait_2" />
-    </a>
-    </div>
-    <div class="last">
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/portrait_3.jpeg">
-        <img src="https://fbdayy.ru/static/images/portrait_3.jpeg" class="fluid" alt="portrait_3" />
-    </a>
-    </div>
-    </div>
-    
-    
-    <div id="block2" style="display:none">
-    <div class="multy">
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/street_1.jpg">
-        <img src="https://fbdayy.ru/static/images/street_1.jpg" class="fluid" alt="street_1" />
-    </a>
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/street_2.jpg">
-        <img src="https://fbdayy.ru/static/images/street_2.jpg" class="fluid" alt="street_2" />
-    </a>
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/street_3.jpg">
-        <img src="https://fbdayy.ru/static/images/street_3.jpg" class="fluid" alt="street_3" />
-    </a>
-    </div>
-    <div class="last">
-    <a
-        data-fancybox
-        class="default"
-        href="https://fbdayy.ru/static/images/street_4.jpeg">
-        <img src="https://fbdayy.ru/static/images/street_4.jpeg" class="fluid" alt="street_4" /></a>
-    </div>
-    </div>
-    
-    
-    <div class="footer">
-        <a class="montserrat-300 default salmon up" href="https://page-portraits.tilda.ws">смотреть фотогалерею</a>
-    </div>
-    
-    
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<script>
-Fancybox.bind('[data-fancybox]', {
-    //
-});    
-</script>
-<script>
-document.getElementById("categories")
-    .onchange = function () {
-        var b = {
-            1: "block1",
-            2: "block2"
-        }, c = this.value,
-            a;
-        for (a in b) document.getElementById(b[a])
-            .style.display = 0 == c || c == a ? "block" : "none"
-};
-</script>
-</body>
-</html>
+}
+
+.multiply{
+    line-height: 1.5;
+}
+
+.central{
+    text-align: center;
+    padding-top: 2vw;
+}
+
+.fluid{
+    display: inline;
+    width: 100%;
+    height: auto;
+}
+
+.simple{
+    padding: 3% 0 0 0;
+}
+
+.multy{
+    display: flex;
+    flex-direction: row;
+    padding: 3% 1% 0 1%;
+    gap: 3%;
+}
+
+.footer{
+    background: #220300;
+    padding: 4% 0 4% 4%;
+}
+
+.last{
+    margin: 3% 0 0 0;
+    padding: 0;
+    background: #220300;
+    border: 0;
+}
+
+body{
+    margin: 0;
+}
+
+select{
+    color: white;
+    background: #220300;
+    border: 0px;
+    border-radius: 5px;
+    margin-top, margin-bottom: 3%;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+ }
+ 
+select::-ms-expand {display: none;} 
+select:hover {
+    border: 2px rgba(110, 126, 127, .5);
+}
+select:focus {
+ box-shadow: 0 0 1px 2px rgba(110, 126, 127, .5);
+ box-shadow: 0 0 0 3px -moz-mac-focusring; 
+ outline: none; 
+} 
