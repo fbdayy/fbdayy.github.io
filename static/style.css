@@ -12,13 +12,9 @@ select{
     width: 96vw;
     height: 14vh;
  }
-.to-gallery{
-    margin: 0;
-    padding: 10vh 0 10vh 6vw;
-}
 }
 
- @media (orientation: portrait){
+@media (orientation: portrait){
 .montserrat-500{
     font-size: calc(12px + 16 * (100vw / 1280));
  }
@@ -32,22 +28,11 @@ select{
     height: 8vh;
     width: 94vw;
  }
- 
-.to-gallery{
-    margin: 0;
-    padding: 6vh 0 6vh 6vw;
 }
-}
-
 
 .default{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-}
-
-.underline:hover {
-    color:brown;
-    transition: 1s;
 }
 
 .up{
@@ -79,11 +64,13 @@ select{
 }
 
 .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/main.jpg);
-    background-size: cover;
-    height: calc(100vw * (93 / 140));
+    height: calc(100vw * (9 / 14));
     flex-direction: column;
     align-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    user-select: text;
+    vertical-align: middle;
 }
 
 .white{
@@ -95,8 +82,10 @@ select{
 }
 
 .inner-block{
-    margin-left: 2vw;
-    margin-right: 40vw;
+    margin: 10% 40vw 10% 3vw;
+    display: inline-block;
+    vertical-align: middle;
+    
 }
 
 .multiply{
@@ -127,8 +116,14 @@ select{
 
 .footer{
     background: #220300;
-    margin: 0;
+    padding: 4% 0 4% 4%;
+}
+
+.last{
+    margin: 3% 0 0 0;
     padding: 0;
+    background: #220300;
+    border: 0;
 }
 
 body{
@@ -141,6 +136,7 @@ select{
     border: 0px;
     border-radius: 5px;
     margin-top, margin-bottom: 3%;
+    cursor: pointer;
     padding: 10px 15px 10px 15px;
  }
  
