@@ -12,15 +12,6 @@ select{
     width: 96vw;
     height: 14vh;
  }
-.main{
-    height: calc(100vw * (9 / 14));
-    flex-direction: column;
-    align-content: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    user-select: text;
-    vertical-align: middle;
-}
 }
 
 @media (orientation: portrait){
@@ -37,19 +28,20 @@ select{
     height: 8vh;
     width: 94vw;
  }
-.main{
-    height: calc(100vw * (9 / 14));
-    flex-direction: column;
-    align-content: center;
-    background-repeat: no-repeat;
-    user-select: text;
-    vertical-align: middle;
-}
 }
 
 .default{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+.main{
+    height: calc(100% * (9 / 14));
+    flex-direction: column;
+    align-content: center;
+    background-repeat: no-repeat;
+    user-select: text;
+    vertical-align: middle;
 }
 
 .up{
