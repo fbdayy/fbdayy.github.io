@@ -78,7 +78,6 @@
     margin: 10% 40vw 10% 3vw;
     display: inline-block;
     vertical-align: middle;
-    
 }
 
 .multiply{
@@ -96,33 +95,104 @@
     height: auto;
 }
 
+.fluid-vertical{
+    display: inline;
+    height: 100%;
+    width: auto;
+}
+
 .simple{
     padding: 3% 0 0 0;
 }
 
-.multy{
+.row-div{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.column-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-top-left-spaced{
     padding: 3% 1% 0 1%;
+}
+
+.top-spaced{
+    padding: 3% 0 0 0;
+}
+
+.inner-spaced{
     gap: 3%;
 }
 
 .footer{
     background: #220300;
-    padding: 2% 0 4% 4%;
+    padding: 2% 0 2% 4%;
 }
 
-.last{
-    margin: 3% 0 0 0;
-    padding: 0;
-    background: #220300;
-    border: 0;
+.equal-grow{
+    flex-grow: 1;
 }
 
 .spaced{
     display: grid;
     gap: 20%;
     height: min-content;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+    cursor: pointer;
+    text-align: center;
+    padding: 10%;
+    border-radius: 50%;
+    background: white;
+    filter: invert(100%);
+    transition: .5s;
+}
+
+.logo:hover {
+    filter: invert(0%);
+}
+
+.circle-wrapper{
+    border: black solid 1.5px;
+    border-radius: 50%;
+    background: black;
+}
+
+.circle-wrapper: hover{
+    background: white;
+}
+
+.logos-div {
+    height: 5vw;
+    justify-content: center;
+    gap: 3%;
+}
+
+.underline-link{
+    display: inline-block;
+    position: relative;
+    &:before {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    margin: -5px 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+  }
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }
 
 body{
@@ -156,12 +226,15 @@ form {
     -webkit-box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.17);
     -moz-box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.17);
     box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.17);
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
     margin: 10%;
-    padding: 7% 18% 18% 18%;
+    padding: 7% 18% 7% 18%;
     flex-direction: column;
     border-radius: 15px;
     background-color: Snow;
+    text-align: center;
 }
 
 input {
@@ -191,14 +264,19 @@ input:focus {
 button {
     color: white;
     background: black;
+    border: black solid 1px;
     border-radius: 30px;
     padding: 3% 5%;
     transition: .5s;
-    border: 1px solid black;
     width: min-content;
     cursor: pointer;
 }
 
 button:hover {
     color: black;
-    background: white
+    background: Snow;
+}
+
+img, a {
+    display: inline-block;
+}
