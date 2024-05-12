@@ -18,6 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     
+    <link rel="icon" href="https://fbdayy.ru/favicon.ico">
+    <link rel="icon" href="https://fbdayy.ru/static/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://fbdayy.ru/static/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="https://fbdayy.ru/manifest.webmanifest">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -30,13 +34,13 @@
         class="default white">
     <div class="main">
         <div class="inner-block">
-            <p class="montserrat-600" style="cursor: text; user-select: all; pointer-events: none;">Приятно<br>познакомиться!</p>
-            <p class="montserrat-400" style="cursor: text; user-select: all; pointer-events: none;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p>
+            <p class="xl bold" style="cursor: text; user-select: all; pointer-events: none;">Приятно<br>познакомиться!</p>
+            <p class="m thin" style="cursor: text; user-select: all; pointer-events: none;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p>
         </div>
     </div>
     </a>
-    <div class="central">
-        <select aria-label="Default select example" padding="14px" class="montserrat-500" id="categories">
+    <div class="row-div central-spaced select-wrapper">
+        <select aria-label="Default select example" padding="14px" class="m medium" id="categories" onchange="showBlock(this)">
             
                 
                     <option selected value="1">Портреты</option>
@@ -51,6 +55,15 @@
                 
             
         </select>
+    </div>
+    <div class="choose-button-wrapper">
+        
+            <button id=button1 class="m bold choose-button" onclick="showBlock(categories, this)">Портреты</button>
+        
+            <button id=button2 class="m bold choose-button" onclick="showBlock(categories, this)">Стрит</button>
+        
+            <button id=button3 class="m bold choose-button" onclick="showBlock(categories, this)">Тест</button>
+        
     </div>
 
 
@@ -186,14 +199,10 @@
         </div>
     
 
-    <div class="footer">
-        <a class="montserrat-400 default salmon up" href="https://page-portraits.tilda.ws" style="padding: 0 0 0 17%">смотреть фотогалерею</a>
-    </div>
-
-    <div class="column-div" style="margin: 15%; gap: 10px; line-height: 1;">
-        <a href="tel:+79818209935" class="montserrat-550" style="text-align: center; dispay: inline-block; color: black;">8 (981) 820 99 35</a>
-        <a href="mailto:ninaf1229@gmail.com" class="montserrat-550" style="text-align: center; display: inline-block; color: black;">ninaf1229@gmail.com</a>
-        <div class="row-div logos-div">
+    <div class="column-div central-spaced" style="margin: 15%; gap: 20px; line-height: 1;">
+        <a href="tel:+79818209935" class="l bold default" style="align-self: center; color: black;">8 (981) 820 99 35</a>
+        <a href="mailto:ninaf1229@gmail.com" class="l bold default" style="align-self: center; color: black;">ninaf1229@gmail.com</a>
+        <div class="row-div logos-div central-spaced">
             <a href="https://vk.com/t00pik" class="default">
 <div class="circle-wrapper fluid-vertical column-div">
 <svg version="1.0"
@@ -298,20 +307,30 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </div>
 </a>
         </div>
+        <div class="to-gallery">
+            <a class="learn-more default" href="https://page-portraits.tilda.ws">
+                <div class="row-div">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="l medium up default button-text">Смотреть фотогалерею</span>
+                </div>
+            </a>
+        </div>
+        <a class="up l bold to-gallery-mobile" href="https://page-portraits.tilda.ws">Смотреть фотогалерею</a>
     </div>
 
-    <p class="montserrat-400" style="text-align: center;" id="req"></p>
+    <p class="m thin" style="text-align: center;" id="req"></p>
     <form method="post" style="display: flex;">
         <div>
-            <p class="montserrat-550">Заказать фотосессию</p>
-            <p class="montserrat-300">Заполните форму с вашими данными и комментарием, и я свяжусь с вами</p>
+            <p class="l bold">Заказать фотосессию</p>
+            <p class="m thin">Заполните форму с вашими данными и комментарием, и я свяжусь с вами</p>
         </div>
-        <input type="email" placeholder="Ваш e-mail" name="email" class="montserat-350" required autocomplete="on">
-        <input type="text" placeholder="Ваше имя" name="name" class="montserat-350" required autocomplete="on">
-        <input type="text" placeholder="Ваш комментарий (желательно)" name="comment" class="montserat-350" autocomplete="off">
-        <button type="submit" class="montserat-350" style="align-self: center;">Заказать</button>
+        <input type="email" placeholder="Ваш e-mail" name="email" class="s medium" required autocomplete="on">
+        <input type="text" placeholder="Ваше имя" name="name" class="s medium" required autocomplete="on">
+        <input type="text" placeholder="Ваш комментарий (желательно)" name="comment" class="s medium" autocomplete="off">
+        <button type="submit" class="m bold" style="align-self: center; height: 5vw; margin: 5%; padding: 0 5%; vertical-align: middle;">Заказать</button>
     </form>
-
 </div>
 
     
@@ -323,24 +342,27 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
     });    
     </script>
     <script>
-    var elem = document.getElementById("categories");
-        onchange = function () {
+        function showBlock(elem, exact=0) {
             var blocks = new Map();
             for (let key in [...Array(elem.length).keys()]) {
                     key++
                     blocks.set(`${key}`, `block${key}`)
                 }
+            if (exact === 0) {
+                var check = elem.value
+            } else {
+                var check = exact.id.slice(6)}
             for (var key1 in Array.from(blocks.keys())) {
                 key1++;
                 var key = `${key1}`;
-                if (elem.value == key) {
+                if (check == key) {
                     document.getElementById(blocks.get(key)).style.display = "block"
                 }
                 else {
                     document.getElementById(blocks.get(key)).style.display = "none"
                 }
             }
-    };
+        };
     </script>
     
 </body>
