@@ -2,7 +2,7 @@
   "name": "Фотограф Нина Фёдорова",
   "short_name": "Нина Фёдорова",
   "lang": "ru",
-  "start_url": "/nina-main",
+  "start_url": "nina-main",
   "display": "browser",
   "theme_color": "#ff8562",
   "icons": [
