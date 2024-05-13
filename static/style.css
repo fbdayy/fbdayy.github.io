@@ -2,9 +2,11 @@
     --base-scale: calc(100vw / 75);
     --primary-font-size: calc(max(1em, min(4em, calc(var(--base-scale) * 4))) / 600);
 }
+
 * {
   box-sizing: border-box;
 }
+
 *::before, *::after {
   box-sizing: border-box;
 }
@@ -62,7 +64,7 @@
     height: calc(100vw * (9 / 14));
     flex-direction: column;
     align-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://fbdayy.ru/static/images/main.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://fbdayy.ru/static/img/main.webp);
     background-size: cover;
     background-repeat: no-repeat;
     user-select: text;
@@ -125,7 +127,7 @@
 
 .footer{
     background: #220300;
-    padding: 5%
+    padding: 5%;
 }
 
 .equal-grow{
@@ -167,6 +169,13 @@
 .central-spaced {
     justify-content: center;
     gap: 3%;
+}
+
+.script-disabled{
+    display: none;
+    align-self: center;
+    justify-self: middle;
+    text-align: center;"
 }
 
 body{
@@ -243,14 +252,27 @@ img, a {
     display: inline-block;
 }
 
-@media (hover: hover) and (pointer: fine) and (min-width: 600px){
-    #categories{
+@media not (scripting: enabled) {
+    .multiply{
         display: none;
-        padding: 0;
+        padding, margin, border: 0;
     }
-    .select-wrapper{
+    .script-disabled {
+        display: block;
+    }
+    body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-content: center;
+        justify-content: middle;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 600px){
+    .select-wrapper *{
         display: none;
-        padding: 0;
+        padding, margin, border: 0;
     }
     .choose-button-wrapper{
         display: grid;
@@ -311,6 +333,7 @@ img, a {
     }
     .to-gallery-mobile {
         display: none;
+        padding, margin, border: 0;
     }
         .learn-more {
         position: relative;
@@ -390,21 +413,13 @@ img, a {
         justify-content: center;
         padding: 3% 1% 0 1%;
     }
-    .choose-button-wrapper{
+    .choose-button-wrapper *{
         display: none;
-        padding: 0;
+        padding, margin, border: 0;
     }
-    .choose-button{
+    .to-gallery *{
         display: none;
-    }
-    .space-span {
-        display: none;
-    }
-    .to-gallery {
-        display: none;
-    }
-    .to-gallery.circle {
-        display: none;
+        padding, margin, border: 0;
     }
     .to-gallery-mobile {
         display: inline-block;
@@ -412,3 +427,4 @@ img, a {
         align-self: center;
     }
 }
+
