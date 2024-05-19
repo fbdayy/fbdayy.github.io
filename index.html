@@ -56,8 +56,8 @@
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/static/favicons/180.png">
 </head>
 <body>
-<main>
     <div class="multiply">
+        <main>
         <a data-fancybox href="/static/img/main.webp", alt="Девушка с фотоаппаратом спускается с лестницы заросшей крепости на фоне туманного неба") class="default white"><div class="main"><div class="inner-block"><p class="xl bold" style="cursor: text; user-select: all; pointer-events: none; color: white;">Приятно<br>познакомиться!</p><p class="m thin" style="cursor: text; user-select: all; pointer-events: none; color: white;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p></div></div></a>
         <div class="row-div central-spaced select-wrapper">
             <select aria-label="Default select example" padding="14px" class="m medium" id="categories" onchange="showBlock(this)">
@@ -99,7 +99,8 @@
                         </div>
                     </div>
             </div>
-        
+        </main>
+        <footer>
         <div class="column-div central-spaced" style="margin: 15%; gap: 20px; line-height: 1;">
             <a href="tel:+79818209935" class="l bold default" style="align-self: center;">8 (981) 820 99 35</a>
             <a href="mailto:ninaf1229@gmail.com" class="l bold default" style="align-self: center;">ninaf1229@gmail.com</a>
@@ -232,7 +233,10 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
             <button type="submit" class="m bold" style="align-self: center; height: 5vw; margin: 5%; padding: 0 5%; vertical-align: middle;">Заказать</button>
         </form>
     </div>
-    <p class="xl bold script-disabled">Для отображения страницы включите <code>javascript</code></p>
+    </footer>
+    <noscript>
+        <p class="xl bold script-disabled">Для отображения страницы включите <code>javascript</code></p>
+    </noscript>
     <!-- Детальная демонстрация фоток -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
