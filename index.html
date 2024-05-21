@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <title>Обо мне | Нина Фёдорова</title>
     
-    <!-- Мета -->
+    <!-- Метаданные -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Сайт-портфолио петербургского фотографа. Знакомство, примеры работ, контакты, заказ фотосессии">
@@ -38,8 +37,8 @@
     <meta name="author" content="fbdayy">
     <meta name="reply-to" content="fbdayy@gmail.com">
     
-    <!-- Шрифты -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>    
+    <!-- Шрифты и галерея -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -56,9 +55,9 @@
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/static/favicons/180.png">
 </head>
 <body>
+    <main>
     <div class="multiply">
-        <main>
-        <a data-fancybox href="/static/img/main.webp", alt="Девушка с фотоаппаратом спускается с лестницы заросшей крепости на фоне туманного неба") class="default white"><div class="main"><div class="inner-block"><p class="xl bold" style="cursor: text; user-select: all; pointer-events: none; color: white;">Приятно<br>познакомиться!</p><p class="m thin" style="cursor: text; user-select: all; pointer-events: none; color: white;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p></div></div></a>
+        <a data-fancybox href="/static/img/main.webp", alt="Девушка с фотоаппаратом спускается с лестницы заросшей крепости на фоне туманного неба" class="default white"><div class="main"><div class="inner-block"><p class="xl bold" style="cursor: text; user-select: all; pointer-events: none; color: white;">Приятно<br>познакомиться!</p><p class="m thin" style="cursor: text; user-select: all; pointer-events: none; color: white;">Я - Нина, фотограф из Санкт-Петербурга. Снимаю преимущественно в жанре Lifestyle, также занимаюсь репортажной и пейзажной съёмкой. Увлекаюсь плёночной фотографией. Люблю естественные живые кадры. Если вы так же, как и я, любите ловить момент, то нам с вами по пути</p></div></div></a>
         <div class="row-div central-spaced select-wrapper">
             <select aria-label="Default select example" padding="14px" class="m medium" id="categories" onchange="showBlock(this)">
                         <option selected value="1">Портреты</option>
@@ -73,29 +72,29 @@
         </div>
                 <div id="block1" style="display:block; width: 100%">
                     <div class="right-top-left-spaced inner-spaced row-div">
-                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_1.webp"><img src="/static/img/portrait_1.webp" class="fluid" alt="img/portrait_1.webp"></a>
-                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_2.webp"><img src="/static/img/portrait_2.webp" class="fluid" alt="img/portrait_2.webp"></a>
+                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_1.webp"><img src="/static/img/portrait_1.webp" class="fluid" alt="описание"></a>
+                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_2.webp"><img src="/static/img/portrait_2.webp" class="fluid" alt="описание"></a>
                     </div>
                     <div class="top-spaced row-div">
-                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_3.webp"><img src="/static/img/portrait_3.webp" class="fluid" alt="img/portrait_3.webp"></a>
+                        <a data-fancybox="Портреты" class="default" href="/static/img/portrait_3.webp"><img src="/static/img/portrait_3.webp" class="fluid" alt="описание"></a>
                     </div>
             </div>
                 <div id="block2" style="display:none; width: 100%">
                     <div class="right-top-left-spaced inner-spaced row-div">
-                        <a data-fancybox="Стрит" class="default" href="/static/img/street_1.webp"><img src="/static/img/street_1.webp" class="fluid" alt="img/street_1.webp"></a>
-                        <a data-fancybox="Стрит" class="default" href="/static/img/street_2.webp"><img src="/static/img/street_2.webp" class="fluid" alt="img/street_2.webp"></a>
-                        <a data-fancybox="Стрит" class="default" href="/static/img/street_3.webp"><img src="/static/img/street_3.webp" class="fluid" alt="img/street_3.webp"></a>
+                        <a data-fancybox="Стрит" class="default" href="/static/img/street_1.webp"><img src="/static/img/street_1.webp" class="fluid" alt="описание"></a>
+                        <a data-fancybox="Стрит" class="default" href="/static/img/street_2.webp"><img src="/static/img/street_2.webp" class="fluid" alt="описание"></a>
+                        <a data-fancybox="Стрит" class="default" href="/static/img/street_3.webp"><img src="/static/img/street_3.webp" class="fluid" alt="описание"></a>
                     </div>
                     <div class="top-spaced row-div">
-                        <a data-fancybox="Стрит" class="default" href="/static/img/street_4.webp"><img src="/static/img/street_4.webp" class="fluid" alt="img/street_4.webp"></a>
+                        <a data-fancybox="Стрит" class="default" href="/static/img/street_4.webp"><img src="/static/img/street_4.webp" class="fluid" alt="описание"></a>
                     </div>
             </div>
                 <div id="block3" style="display:none; width: 100%">
                     <div class="right-top-left-spaced inner-spaced row-div">
-                        <a data-fancybox="Тест" class="default" href="/static/img/test_1.webp"><img src="/static/img/test_1.webp" class="fluid" alt="img/test_1.webp"></a>
+                        <a data-fancybox="Тест" class="default" href="/static/img/test_1.webp"><img src="/static/img/test_1.webp" class="fluid" alt="описание"></a>
                         <div class="equal-grow column-div">
-                                <a data-fancybox="Тест" class="default" href="/static/img/test_2.webp"><img src="/static/img/test_2.webp" class="fluid" alt="img/test_2.webp"></a>
-                                <a data-fancybox="Тест" class="default" href="/static/img/test_3.webp"><img src="/static/img/test_3.webp" class="fluid" alt="img/test_3.webp"></a>
+                                <a data-fancybox="Тест" class="default" href="/static/img/test_2.webp"><img src="/static/img/test_2.webp" class="fluid" alt="описание"></a>
+                                <a data-fancybox="Тест" class="default" href="/static/img/test_3.webp"><img src="/static/img/test_3.webp" class="fluid" alt="описание"></a>
                         </div>
                     </div>
             </div>
@@ -105,14 +104,15 @@
             <a href="tel:+79818209935" class="l bold default" style="align-self: center;">8 (981) 820 99 35</a>
             <a href="mailto:ninaf1229@gmail.com" class="l bold default" style="align-self: center;">ninaf1229@gmail.com</a>
             <div class="row-div logos-div central-spaced">
+                <!-- Логотип VK -->
                 <a href="https://vk.com/t00pik" class="default">
 <div class="circle-wrapper fluid-vertical column-div">
 <svg version="1.0"
     viewBox="0 0 4500.000000 4500.000000"
-    preserveAspectRatio="xMidYMid meet" class="logo">
+    preserveAspectRatio="xMidYMid meet" class="vk-logo logo">
 
-<g transform="translate(100.000000,4500.000000) scale(0.100000,-0.100000)" class="fill">
-<path d="M3775 31798 c-932 -74 -1558 -542 -1754 -1313 -112 -437 -83 -916
+<g transform="translate(100.000000,4500.000000) scale(0.100000,-0.100000)" class="vk-fill">
+<path fill-rule="nonzero" d="M3775 31798 c-932 -74 -1558 -542 -1754 -1313 -112 -437 -83 -916
 105 -1735 428 -1866 1459 -4403 2807 -6905 926 -1720 1941 -3344 3225 -5165
 1011 -1432 1932 -2488 3072 -3520 1595 -1444 3435 -2572 5295 -3245 1414 -511
 2814 -765 4220 -765 1264 1 2104 154 2644 484 512 312 796 781 873 1441 14
@@ -165,11 +165,13 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </svg>
 </div>
 </a>
+                
+                <!-- Логотип Telegram -->
                 <a href="https://t.me/nin_nt" class="default">
-<div class="circle-wrapper fluid-vertical column-div">
+<div class="circle-wrapper fluid-vertical column-div" style="background: inherit">
 <svg
-    viewBox="0 0 1000 1000" class="logo">
-<path transform="translate(15, 50)" class="fill" d="M787.247 106.181C778.607 106.56 770.196 108.965 762.612
+    viewBox="0 0 1000 1000" class="tg-logo logo">
+<path transform="translate(15, 50)" class="tg-fill" d="M787.247 106.181C778.607 106.56 770.196 108.965 762.612
 112.002C755.105 115.019 711.886 133.465 648.064 160.752C584.242 188.039 501.278
 223.573 419.038 258.807C254.557 329.277 92.9269 398.614 92.9269 398.614L94.105
 398.163C94.105 398.163 84.3497 401.424 74.4593 408.315C69.5141 411.761 64.1938
@@ -232,21 +234,24 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
             <input type="text" placeholder="Ваш комментарий (желательно)" name="comment" class="s medium" autocomplete="off">
             <button type="submit" class="m bold" style="align-self: center; height: 5vw; margin: 5%; padding: 0 5%; vertical-align: middle;">Заказать</button>
         </form>
+        </footer>
     </div>
-    </footer>
-    <noscript>
-        <p class="xl bold script-disabled">Для отображения страницы включите <code>javascript</code></p>
-    </noscript>
+    <noindex>
+        <div>
+            <p class="xl bold script-disabled">Для отображения страницы включите <code>javascript</code></p>
+            <p class="m bold script-disabled">Или посмотрите <span><a href="https://fbdayy.ru/light-index.html">упрощённую версию</a></span> страницы</p>
+        </div>
+    </noindex>
     <!-- Детальная демонстрация фоток -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
+    <script async>
     Fancybox.bind('[data-fancybox]', {
         //
     });    
     </script>
     
     <!-- Ротация блоков -->
-    <script>
+    <script async>
         function showBlock(elem, exact=0) {
             var blocks = new Map();
             for (let key in [...Array(elem.length).keys()]) {
