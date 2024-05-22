@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+  <url>
+    <loc>https://fbdayy.ru</loc>
+    <lastmod>2024-05-22T21:35:02+03:00</lastmod>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/portrait_1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/portrait_2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/portrait_3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/street_1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/street_2.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/street_3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.ru/static/img/street_4.webp</image:loc>
+    </image:image>
+  </url>
+</urlset>
