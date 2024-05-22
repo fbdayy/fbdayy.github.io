@@ -8,7 +8,7 @@
   "lang": "ru",
   "dir": "ltr",
   "id": "/",
-  "start_url": "/nina-main",
+  "start_url": "/",
   "theme_color": "#220300",
   "background_color": "#ffffff",
   "display": "standalone",
