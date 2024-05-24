@@ -2,7 +2,7 @@
     <msapplication>
         <tile>
             <square150x150logo src="https://fbdayy.ru/static/favicons/150.png"/>
-            <TileColor>#ff8562</TileColor>
+            <TileColor>#5b2a2a</TileColor>
         </tile>
     </msapplication>
 </browserconfig>
