@@ -201,8 +201,11 @@ nav {
     background: #5b2a2a;
     height: max(5vh, 10vw);
     align-items: center;
-    top: -0.4em;
     z-index: 4;
+}
+
+footer nav {
+    top: -0.4em;
 }
 
 nav a.m.bold {
