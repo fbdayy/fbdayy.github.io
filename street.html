@@ -11,7 +11,7 @@
     
     <!-- Карточка для соцсетей -->
     <meta name="og:description" content=" Сайт-портфолио петербургского фотографа. Фотогалерея. Стрит">
-    <meta property="og:title" content="Личный сайт фотографа">
+    <meta property="og:title" content="Нина Фёдорова">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:secure_url" content="https://fbdayy.ru/street">
     <meta property="og:site_name" content="Стрит | Нина Фёдорова">
@@ -23,13 +23,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Стрит | Нина Фёдорова">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-navbutton-color" content="#5b2a2a">
+    <meta name="msapplication-navbutton-color" content="#ff8562">
     <meta name="msapplication-starturl" content="https://fbdayy.ru/street">
-    <meta name="msapplication-TileColor" content="#5b2a2a">
+    <meta name="msapplication-TileColor" content="#ff8562">
     <meta name="msapplication-TileImage" content="https://fbdayy.ru/static/favicons/144.png">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Стрит | Нина Фёдорова">
-    <meta name="theme-color" content="#5b2a2a">
+    <meta name="theme-color" content="#ff8562">
     
     <!-- Индексация -->
     <meta name="robots" content="index, follow">
@@ -39,11 +39,11 @@
     <meta name="reply-to" content="fbdayy@gmail.com">
     
     <!-- Шрифты и галерея -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" crossorigin="anonymous" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" crossorigin="anonymous" onload="this.rel='stylesheet'">
     
     <!-- Сборка -->
     <link rel="manifest" href="https://fbdayy.ru/manifest.json">
@@ -51,7 +51,7 @@
     <link rel="canonical" content="https://fbdayy.ru/street">
     
     <!-- Иконки -->
-    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#5b2a2a">
+    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#ff8562">
     <link rel="icon" type="image/svg+xml" sizes="256x256" href="/static/favicons/256.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/static/favicons/180.png">
 </head>
@@ -63,7 +63,7 @@
                     <p class="m bold">Стрит</p>
         </nav>
     </header>
-    <a class="to-the-top" href="#first"></a>
+    <a aria-hidden="true" class="to-the-top" href="#first"></a>
     <main class="always-visible">
     <p class="xl bold">Фотогалерея</p>
     <div class="multiply">
@@ -164,7 +164,7 @@
             <a href="mailto:ninaf1229@gmail.com" class="l bold default">ninaf1229@gmail.com</a>
             <div class="row-div logos-div central-spaced">
                 <!-- Логотип VK -->
-                <a href="https://vk.com/t00pik" class="default">
+                <a aria-label="VK" href="https://vk.com/t00pik" class="default">
 <div class="circle-wrapper fluid-vertical column-div">
 <svg version="1.0"
     viewBox="0 0 4500.000000 4500.000000"
@@ -226,7 +226,7 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </a>
                 
                 <!-- Логотип Telegram -->
-                <a href="https://t.me/nin_nt" class="default">
+                <a aria-label="Telegram" href="https://t.me/nin_nt" class="default">
 <div class="circle-wrapper fluid-vertical column-div" style="background: inherit">
 <svg
     viewBox="0 0 1000 1000" class="tg-logo logo">
