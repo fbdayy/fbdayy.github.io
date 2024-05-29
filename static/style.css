@@ -5,7 +5,6 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: 1vw;
 }
 
 
@@ -133,7 +132,7 @@ html {
 }
 
 .right-top-left-spaced {
-    padding: 3vw 1vw 0 1vw;
+    padding: 3% 1% 0 1%;
 }
 
 .top-spaced {
