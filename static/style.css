@@ -5,7 +5,6 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: 1vw;
 }
 
 
@@ -133,7 +132,7 @@ html {
 }
 
 .right-top-left-spaced {
-    padding: 3vw 1vw 0 1vw;
+    padding: 3% 1% 0 1%;
 }
 
 .top-spaced {
@@ -141,7 +140,7 @@ html {
 }
 
 .inner-spaced {
-    gap: 3vw;
+    gap: 3%;
 }
 
 .footer {
@@ -319,10 +318,6 @@ address.column-div {
 	background: #111;
     }
 
-    img {
-        background: radial-gradient(circle, #111 0%, rgba(109,109,109,1) 40%, #111 100%);
-    }
-
     .to-the-top {
         background: #111;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .8);
@@ -415,10 +410,6 @@ address.column-div {
 @media (prefers-color-scheme: light) {
     nav {
         background: #5b2a2a;
-    }
-
-    img {
-        background: radial-gradient(circle, #fafafa 0%, rgba(216,216,216,1) 26%, #fafafa 100%);
     }
 
     .to-the-top {
