@@ -23,13 +23,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Стрит | Нина Фёдорова">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-navbutton-color" content="#5b2a2a">
+    <meta name="msapplication-navbutton-color" content="#ff8562">
     <meta name="msapplication-starturl" content="https://fbdayy.ru/street">
-    <meta name="msapplication-TileColor" content="#5b2a2a">
+    <meta name="msapplication-TileColor" content="#ff8562">
     <meta name="msapplication-TileImage" content="https://fbdayy.ru/static/favicons/144.png">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Стрит | Нина Фёдорова">
-    <meta name="theme-color" content="#5b2a2a">
+    <meta name="theme-color" content="#ff8562">
     
     <!-- Индексация -->
     <meta name="robots" content="index, follow">
@@ -39,6 +39,7 @@
     <meta name="reply-to" content="fbdayy@gmail.com">
     
     <!-- Шрифты и галерея -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" crossorigin="anonymous" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -50,41 +51,39 @@
     <link rel="canonical" content="https://fbdayy.ru/street">
     
     <!-- Иконки -->
-    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#5b2a2a">
+    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#ff8562">
     <link rel="icon" type="image/svg+xml" sizes="256x256" href="/static/favicons/256.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/static/favicons/180.png">
 </head>
 <body id="first">
-<a aria-hidden="true" class="to-the-top" href="#first"></a>
     <header class="always-visible">
-                <nav aria-label="Главная">
+        <nav>
                     <a class="m bold" href="/">Обо мне</a>
                     <a class="m bold" href="/portraits">Портреты</a>
                     <p class="m bold">Стрит</p>
         </nav>
     </header>
+    <a aria-hidden="true" class="to-the-top" href="#first"></a>
     <main class="always-visible">
     <p class="xl bold">Фотогалерея</p>
     <div class="multiply">
-        <!-- Сгенерированная галерея -->
-        
                 <div id="block1" style="display:block; width: 100%">
                     <div class="right-top-left-spaced inner-spaced row-div">
                         <a data-fancybox="Стрит" class="default" href="/static/img/street_5.jpg">
-                            <img loading="lazy" src="/static/img/street_5.jpg" class="fluid" alt="Человек на костылях, хромая, идёт по обочине дороги, полностью заметённой снегом">
+                            <img src="/static/img/street_5.jpg" class="fluid" alt="Человек на костылях, хромая, идёт по обочине дороги, полностью заметённой снегом">
                         </a>
                         <a data-fancybox="Стрит" class="default" href="/static/img/street_6.jpg">
-                            <img loading="lazy" src="/static/img/street_6.jpg" class="fluid" alt="Три тёмных фигуры вдали пробираются через толстый слой снега, накрывший речку">
+                            <img src="/static/img/street_6.jpg" class="fluid" alt="Три тёмных фигуры вдали пробираются через толстый слой снега, накрывший речку">
                         </a>
                     </div>
                     <div class="right-top-left-spaced row-div">
                         <a data-fancybox="Стрит" class="default" href="/static/img/street_4.jpg">
-                            <img loading="lazy" src="/static/img/street_4.jpg" class="fluid" alt="Ребёнок, улыбаясь, убегает с большой чёрной пешкой в руках от другого ребёнка">
+                            <img src="/static/img/street_4.jpg" class="fluid" alt="Ребёнок, улыбаясь, убегает с большой чёрной пешкой в руках от другого ребёнка">
                         </a>
                     </div>
                     <div class="right-top-left-spaced inner-spaced row-div">
                         <a data-fancybox="Стрит" class="default" href="/static/img/street_7.jpg">
-                            <img loading="lazy" src="/static/img/street_7.jpg" class="fluid" alt="Два стула стоят на краю пирса и, как будто, смотрят в воду">
+                            <img src="/static/img/street_7.jpg" class="fluid" alt="Два стула стоят на краю пирса и, как будто, смотрят в воду">
                         </a>
                         <a data-fancybox="Стрит" class="default" href="/static/img/street_8.jpg">
                             <img loading="lazy" src="/static/img/street_8.jpg" class="fluid" alt="Фотограф на закате на фоне залива">
@@ -158,10 +157,9 @@
                         </a>
                     </div>
             </div>
-    </div>
-    </main>
-    <footer>
-                <address class="column-div central-spaced">
+        </main>
+        <footer class="always-visible">
+        <address class="column-div central-spaced">
             <a href="tel:+79818209935" class="l bold default">8 (981) 820 99 35</a>
             <a href="mailto:ninaf1229@gmail.com" class="l bold default">ninaf1229@gmail.com</a>
             <div class="row-div logos-div central-spaced">
@@ -272,39 +270,14 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </a>
             </div>
         </address>
-    </footer>
-        <!-- Детальная демонстрация фото -->
+        </footer>
+    </div>
+    <!-- Детальная демонстрация фото -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
     <script async>
     Fancybox.bind('[data-fancybox]', {
         //
     });    
-    </script>
-
-        <!-- Ротация блоков -->
-    <script async>
-        function showBlock(elem, exact=0) {
-            var blocks = new Map();
-            for (let key in [...Array(elem.length).keys()]) {
-                    key++
-                    blocks.set(`${key}`, `block${key}`)
-                }
-            if (exact === 0) {
-                var check = elem.value
-            } else {
-                var check = exact.id.slice(6)
-            }
-            for (var key1 in Array.from(blocks.keys())) {
-                key1++;
-                var key = `${key1}`;
-                if (check == key) {
-                    document.getElementById(blocks.get(key)).style.display = "block"
-                }
-                else {
-                    document.getElementById(blocks.get(key)).style.display = "none"
-                }
-            }
-        };
     </script>
 </body>
 </html>

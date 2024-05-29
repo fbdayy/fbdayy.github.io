@@ -23,13 +23,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Портреты | Нина Фёдорова">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-navbutton-color" content="#5b2a2a">
+    <meta name="msapplication-navbutton-color" content="#ff8562">
     <meta name="msapplication-starturl" content="https://fbdayy.ru/portraits">
-    <meta name="msapplication-TileColor" content="#5b2a2a">
+    <meta name="msapplication-TileColor" content="#ff8562">
     <meta name="msapplication-TileImage" content="https://fbdayy.ru/static/favicons/144.png">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Портреты | Нина Фёдорова">
-    <meta name="theme-color" content="#5b2a2a">
+    <meta name="theme-color" content="#ff8562">
     
     <!-- Индексация -->
     <meta name="robots" content="index, follow">
@@ -39,6 +39,7 @@
     <meta name="reply-to" content="fbdayy@gmail.com">
     
     <!-- Шрифты и галерея -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" crossorigin="anonymous" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -50,41 +51,39 @@
     <link rel="canonical" content="https://fbdayy.ru/portraits">
     
     <!-- Иконки -->
-    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#5b2a2a">
+    <link rel="mask-icon" href="/static/favicons/favicon.svg" color="#ff8562">
     <link rel="icon" type="image/svg+xml" sizes="256x256" href="/static/favicons/256.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/static/favicons/180.png">
 </head>
 <body id="first">
-<a aria-hidden="true" class="to-the-top" href="#first"></a>
     <header class="always-visible">
-                <nav aria-label="Главная">
+        <nav>
                     <a class="m bold" href="/">Обо мне</a>
                     <p class="m bold">Портреты</p>
                     <a class="m bold" href="/street">Стрит</a>
         </nav>
     </header>
+    <a aria-hidden="true" class="to-the-top" href="#first"></a>
     <main class="always-visible">
     <p class="xl bold">Фотогалерея</p>
     <div class="multiply">
-        <!-- Сгенерированная галерея -->
-        
                 <div id="block1" style="display:block; width: 100%">
                     <div class="right-top-left-spaced inner-spaced row-div">
                         <a data-fancybox="Портреты" class="default" href="/static/img/portrait_1.jpg">
-                            <img loading="lazy" src="/static/img/portrait_1.jpg" class="fluid" alt="Девушка в городе смотрит в камеру на фоне идущей мимо толпы">
+                            <img src="/static/img/portrait_1.jpg" class="fluid" alt="Девушка в городе смотрит в камеру на фоне идущей мимо толпы">
                         </a>
                         <a data-fancybox="Портреты" class="default" href="/static/img/portrait_2.jpg">
-                            <img loading="lazy" src="/static/img/portrait_2.jpg" class="fluid" alt="Девушка в бежевом пальто и солнцезащитных очках смотрит вверх на фоне белого строгого здания">
+                            <img src="/static/img/portrait_2.jpg" class="fluid" alt="Девушка в бежевом пальто и солнцезащитных очках смотрит вверх на фоне белого строгого здания">
                         </a>
                     </div>
                     <div class="right-top-left-spaced row-div">
                         <a data-fancybox="Портреты" class="default" href="/static/img/portrait_4.png">
-                            <img loading="lazy" src="/static/img/portrait_4.png" class="fluid" alt="Девушка в платье сидит в пустом вагоне старой электрички с запотевшими стёклами">
+                            <img src="/static/img/portrait_4.png" class="fluid" alt="Девушка в платье сидит в пустом вагоне старой электрички с запотевшими стёклами">
                         </a>
                     </div>
                     <div class="right-top-left-spaced row-div">
                         <a data-fancybox="Портреты" class="default" href="/static/img/portrait_3.jpeg">
-                            <img loading="lazy" src="/static/img/portrait_3.jpeg" class="fluid" alt="Девушка в белой рубашке лежит в гамаке посреди травы и выразительно смотрит в камеру">
+                            <img src="/static/img/portrait_3.jpeg" class="fluid" alt="Девушка в белой рубашке лежит в гамаке посреди травы и выразительно смотрит в камеру">
                         </a>
                     </div>
                     <div class="right-top-left-spaced row-div">
@@ -152,10 +151,9 @@
                         </a>
                     </div>
             </div>
-    </div>
-    </main>
-    <footer>
-                <address class="column-div central-spaced">
+        </main>
+        <footer>
+        <address class="column-div central-spaced">
             <a href="tel:+79818209935" class="l bold default">8 (981) 820 99 35</a>
             <a href="mailto:ninaf1229@gmail.com" class="l bold default">ninaf1229@gmail.com</a>
             <div class="row-div logos-div central-spaced">
@@ -266,39 +264,14 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </a>
             </div>
         </address>
-    </footer>
-        <!-- Детальная демонстрация фото -->
+        </footer>
+    </div>
+    <!-- Детальная демонстрация фото -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
     <script async>
     Fancybox.bind('[data-fancybox]', {
         //
     });    
-    </script>
-
-        <!-- Ротация блоков -->
-    <script async>
-        function showBlock(elem, exact=0) {
-            var blocks = new Map();
-            for (let key in [...Array(elem.length).keys()]) {
-                    key++
-                    blocks.set(`${key}`, `block${key}`)
-                }
-            if (exact === 0) {
-                var check = elem.value
-            } else {
-                var check = exact.id.slice(6)
-            }
-            for (var key1 in Array.from(blocks.keys())) {
-                key1++;
-                var key = `${key1}`;
-                if (check == key) {
-                    document.getElementById(blocks.get(key)).style.display = "block"
-                }
-                else {
-                    document.getElementById(blocks.get(key)).style.display = "none"
-                }
-            }
-        };
     </script>
 </body>
 </html>
