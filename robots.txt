@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: 
+Disallow: /dicts.html
+Disallow: /about.html
 Host: fbdayy.ru
 Sitemap: https://fbdayy.ru/sitemap.xml
