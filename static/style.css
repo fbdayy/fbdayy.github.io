@@ -205,7 +205,7 @@ nav {
 }
 
 footer nav {
-    transform: translateY(-0.4em);
+    transform: translateY(-1.3vw);
 }
 
 nav a.m.bold {
@@ -324,7 +324,7 @@ address.column-div {
     }
 
     .placeholder{
-        background: radial-gradient(rgba(30,30,30,1) 0%, #111 50%);
+        background: radial-gradient(circle, #111 0%, rgba(50, 50, 50, 1) 26%, #111 50%);
     }
 
     .to-the-top::after {
