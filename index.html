@@ -247,7 +247,25 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
 </a>
             </div>
         </address>
+                <form id="my-form" action="https://formspree.io/f/myyrraga" method="POST" style="display: flex; justify-content: center">
+            <fieldset>
+                <div>
+                    <p class="l bold">Заказать фотосессию</p>
+                    <p class="m thin">Заполните форму с вашими данными и комментарием, и я свяжусь с вами</p>
+                </div>
+                <input type="email" placeholder="Ваш e-mail" name="email" class="s medium" required autocomplete="on">
+                <input type="text" placeholder="Ваше имя" name="name" class="s medium" required autocomplete="on">
+                <textarea type="text" placeholder="Ваш комментарий (желательно)" name="message" class="s medium" autocomplete="off"></textarea>
+                <button type="submit" id="my-form-button" class="m bold" style="align-self: center; height: 5vw; margin: 5%; padding: 0 5%; vertical-align: middle;">Заказать</button>
+                <p id="my-form-status" class="s medium"></p>
+            </fieldset>
+        </form>
+        <div id="success" style="display: none;">
+            <p class="l bold" style="text-align: center">Заявка отправлена</p>
+            <button class="m bold" onclick="formBack()" style="height: 5vw; text-align: center; align-self: center; padding: 0 3vw">Отправить ещё одну</button>
+        </div>
     </footer>
+    <!-- Скрипты для галереи -->
         <!-- Детальная демонстрация фото -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
     <script async>
@@ -256,6 +274,7 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
     });    
     </script>
 
+    <!-- Ротация блоков -->
         <!-- Ротация блоков -->
     <script async>
         function showBlock(elem, exact=0) {
@@ -281,5 +300,47 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
             }
         };
     </script>
+
+    <!-- Скрипты для работы формы -->
+    <script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Завка отправлена";
+        form.reset()
+        document.getElementById("my-form").style = "display: none"
+        document.getElementById("success").style = "display: flex; padding: 0 18% 14% 18%; flex-direction: column; align-content: center"
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Упс! Кажется, что-то пошло не по плану..."
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Упс! Кажется, что-то пошло не по плану..."
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+
+  function formBack() {
+    document.getElementById("my-form").style = 'display: block;'; 
+    document.getElementById("success").style = 'display: none;';
+    document.getElementById("my-form-status").innerText = "";
+  }
+</script>
 </body>
 </html>
