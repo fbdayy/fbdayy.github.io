@@ -80,8 +80,9 @@ html {
 .main a {
     position: relative;
     z-index: 1;
-    height: 64.3vw;
     width: 100%;
+    aspect-ratio: 713 / 469;
+    transform: translateY(35.4%);
 }
 
 .inner-block {
@@ -92,7 +93,7 @@ html {
     vertical-align: middle;
     z-index: 2;
     color: white;
-    transform: translateY(-150%);
+    transform: translateY(-100%);
 }
 
 .multiply {
@@ -234,31 +235,33 @@ select::-ms-expand {
 
 input {
     border: 0;
-    padding: 3% 0 3% 0;
+    padding: 3% 0;
     border-bottom: 1px solid rgba(165, 165, 165, .7);
     background: inherit;
     transform: translateX(0);
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
+    min-height: 4vw;
     border: 0;
     padding: 0;
+    margin-top: 2%;
     border-bottom: 1px solid rgba(165, 165, 165, .7);
     background: inherit;
     transform: translateX(0);
-    min-height: 4vw;
 }
 
 input::placeholder {
     position: fixed;
+    z-index: 2;
     top: 20%;
 }
 
 textarea::placeholder {
     position: fixed;
-    top: calc(50% - 1.1em);
-    left: .1em;
+    z-index: 2;
+    top: 0%;
 }
 
 input::-ms-expand, textarea::-ms-expand {
@@ -280,7 +283,7 @@ fieldset {
     justify-content: space-between;
     gap: 1.5em;
     margin: 10%;
-    padding: 7% 18% 7% 18%;
+    padding: 7% 10% 7% 10%;
     flex-direction: column;
     border-radius: 15px;
     background: inherit;
@@ -652,6 +655,13 @@ address.column-div {
     address > a.l {
         border: 0 solid;
     }
+
+    button {
+        height: 5vw;
+        text-align: center;
+        align-self: center;
+        padding: 0 3vw;
+    }
 }
 
 @media not ((hover: hover) and (pointer: fine) and (min-width: 37.5em)){
@@ -659,7 +669,7 @@ address.column-div {
         display: block;
     }
 
-    a.l {
+    a.l, fieldset p.l, #success p.l {
         align-self: center;
         font-size: calc(var(--primary-font-size) * 500);
         padding-bottom: .065em;
@@ -667,6 +677,13 @@ address.column-div {
     
     select.m, nav p.m.bold, nav a.m.bold {
         font-size: calc(var(--primary-font-size) * 350);
+    }
+
+    button {
+        height: 7vw;
+        text-align: center;
+        align-self: center;
+        padding: 0 3vw;
     }
     
     .select-wrapper {
@@ -682,6 +699,10 @@ address.column-div {
     
     .main-description p {
         font-size: calc(var(--primary-font-size) * 250);
+    }
+
+    input.m, textarea.m, fieldset p.m, fieldset button.m, #success button.m {
+        font-size: calc(var(--primary-font-size) * 300);
     }
     
     @supports (animation-name: move) {
