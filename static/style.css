@@ -351,7 +351,7 @@ address.column-div {
     }
 
     .placeholder{
-        background: radial-gradient(circle, #111 0%, rgba(50, 50, 50, 1) 26%, #111 50%);
+        background: #2c2c2c;
     }
 
     .to-the-top::after {
@@ -444,7 +444,8 @@ address.column-div {
     }
 
     .placeholder {
-        background: radial-gradient(circle, #fafafa 0%, rgba(216,216,216,1) 26%, #fafafa 50%);
+        background: #d3d3d3;
+        animation: load 3s infinite;
     }
 
     .to-the-top {
@@ -763,5 +764,17 @@ address.column-div {
     
     100% {
         margin-top: 0;
+    }
+}
+
+@keyframes load {
+    0% {
+        background: #d3d3d3;
+    }
+    20% {
+        background: #e6e6e6;
+    }
+    40% {
+        background: #d3d3d3;
     }
 }
