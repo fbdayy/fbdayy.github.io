@@ -78,22 +78,24 @@ html {
 }
 
 .main a {
-    position: relative;
+    position: fixed;
     z-index: 1;
+    top: 0%;
+    left: 0%;
     width: 100%;
-    aspect-ratio: 713 / 469;
-    transform: translateY(35.4%);
+    aspect-ratio: 375 / 241;
 }
 
 .inner-block {
-    position: relative;
+    position: fixed;
     cursor: text;
     margin: 4.5vw 40vw 0 3vw;
     display: inline-block;
     vertical-align: middle;
     z-index: 2;
     color: white;
-    transform: translateY(-100%);
+    left: 0%;
+    top: 5%;
 }
 
 .multiply {
