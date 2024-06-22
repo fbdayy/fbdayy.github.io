@@ -208,7 +208,7 @@ nav {
 }
 
 footer nav {
-    transform: translateY(-1.3vw);
+    transform: translateY(-2.1vw);
 }
 
 nav a.m.bold {
@@ -307,6 +307,17 @@ img, a {
     display: inline-block;
 }
 
+a.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    text-align: center;
+}
+
 main > p.xl.bold {
     cursor: default;
     text-align: center;
@@ -351,7 +362,8 @@ address.column-div {
     }
 
     .placeholder{
-        background: #2c2c2c;
+        background: #191919;
+        animation: load 3s infinite;
     }
 
     .to-the-top::after {
@@ -434,6 +446,18 @@ address.column-div {
         color: #fafafa;
         align-self: center;
         text-align: center;
+    }
+
+    @keyframes load {
+        0% {
+            background: #191919;
+        }
+        20% {
+            background: #232323;
+        }
+        40% {
+            background: #191919;
+        }
     }
 
 }
@@ -534,6 +558,18 @@ address.column-div {
         color: #5b2a2a;
         align-self: center;
         text-align: center;
+    }
+
+    @keyframes load {
+        0% {
+            background: #d3d3d3;
+        }
+        20% {
+            background: #e6e6e6;
+        }
+        40% {
+            background: #d3d3d3;
+        }
     }
 }
 
@@ -704,7 +740,7 @@ address.column-div {
         font-size: calc(var(--primary-font-size) * 250);
     }
 
-    input.m, textarea.m, fieldset p.m, fieldset button.m, #success button.m {
+    input.m, textarea.m, fieldset p.m, fieldset button.m, #success button.m, a.placeholder {
         font-size: calc(var(--primary-font-size) * 300);
     }
     
@@ -764,17 +800,5 @@ address.column-div {
     
     100% {
         margin-top: 0;
-    }
-}
-
-@keyframes load {
-    0% {
-        background: #d3d3d3;
-    }
-    20% {
-        background: #e6e6e6;
-    }
-    40% {
-        background: #d3d3d3;
     }
 }
