@@ -276,7 +276,7 @@ input:focus, textarea:focus {
 
 button {
     transition: background .45s, color .45s, border .45s;
-    border-radius: 1.5em;
+    border-radius: 500px;
     cursor: pointer;
 }
 
