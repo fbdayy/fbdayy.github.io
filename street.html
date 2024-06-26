@@ -318,5 +318,8 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
     </footer>
         <!-- Скрипты для галереи -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
+    <script async>
+        document.onreadystatechange = () => {if (document.readyState === 'complete') {Fancybox.bind('[data-fancybox]', {})}};
+    </script>
 </body>
 </html>
