@@ -318,24 +318,5 @@ m4395 -1598 c194 -24 285 -62 380 -160 148 -152 261 -392 486 -1033 744 -2117
     </footer>
         <!-- Скрипты для галереи -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" async></script>
-    <script>
-    check = 0;
-    photosCheck = 0;
-    document.onreadystatechange = () => {if (document.readyState === 'complete') {Fancybox.bind('[data-fancybox]', {}); textChange(check)}};
-    function textChange(x) {
-        if (x != 1) 
-                {a = document.getElementsByClassName('placeholder'); for (i of a) {
-                if (i.children[0].complete == false && photosCheck == 0) {
-                    i.append(i.children[0].alt); i.children[0].style.display = 'none'; i.style.animation = 'none';
-                } else {photosCheck = 1; backslide()};
-            check = 1;
-            };
-        };
-    };
-    function backslide() {
-        a = document.getElementsByTagName('img')
-        for (i of a) {i.onloadstart = ''; b = i.parentElement; c = b.children[0]; c.style.display = 'block'; b.text = ''; b.appendChild(c)}
-    }
-    </script>
 </body>
 </html>
