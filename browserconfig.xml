@@ -1,7 +1,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="https://fbdayy.ru/static/favicons/150.png"/>
+            <square150x150logo src="https://fbdayy.github.io/web/static/favicons/150.png"/>
             <TileColor>#5b2a2a</TileColor>
         </tile>
     </msapplication>
