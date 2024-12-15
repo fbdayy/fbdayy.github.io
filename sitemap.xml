@@ -6,143 +6,143 @@
     <lastmod>2024-05-27T21:54:15+03:00</lastmod>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/main.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/main.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_1.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_1.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_2.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_2.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_3.jpeg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_3.jpeg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_1.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_1.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_2.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_2.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_3.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_3.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_4.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://fbdayy.ru/portraits</loc>
-    <lastmod>2024-05-27T21:54:15+03:00</lastmod>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_4.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_5.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_6.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_7.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_8.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_9.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_10.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_11.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_12.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_13.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_14.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_15.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_16.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_17.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_18.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_19.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fbdayy.ru/static/img/portrait_20.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_4.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://fbdayy.ru/street</loc>
+    <loc>https://fbdayy.github.io/web/portraits</loc>
     <lastmod>2024-05-27T21:54:15+03:00</lastmod>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_5.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_4.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_6.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_5.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_7.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_6.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_8.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_7.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_9.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web//static/img/portrait_8.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_10.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_9.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_11.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_10.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_12.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_11.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_13.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_12.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_15.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_13.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_14.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_14.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_22.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_15.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_16.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_16.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_17.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_17.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_18.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_18.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_19.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_19.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_20.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/portrait_20.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fbdayy.github.io/web/street</loc>
+    <lastmod>2024-05-27T21:54:15+03:00</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_5.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://fbdayy.ru/static/img/street_21.jpg</image:loc>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_6.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_7.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_8.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_9.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_10.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_11.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_12.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_13.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_15.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_14.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_22.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_16.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_17.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_18.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_19.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_20.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://fbdayy.github.io/web/static/img/street_21.jpg</image:loc>
     </image:image>
   </url>
 </urlset>
